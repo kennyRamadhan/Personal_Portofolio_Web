@@ -11,7 +11,7 @@ export default function Contact() {
       <div className="flex flex-col gap-3 text-lg">
         <a href={`mailto:${email}`} className="hover:underline">Email: {email}</a>
         <a href={`https://wa.me/${wa}`} target="_blank" rel="noopener noreferrer" className="hover:underline">WhatsApp: {wa}</a>
-        <a href="https://www.linkedin.com/in/kennyramadhan" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/kenny-ramadhan-704849184/" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a>
         <a href="https://github.com/kennyramadhan" target="_blank" rel="noopener noreferrer" className="hover:underline">GitHub</a>
       </div>
     </div>
