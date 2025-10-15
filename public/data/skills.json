@@ -1,0 +1,24 @@
+[
+  { "name": "Test Case","level": "Advanced"},
+  { "name": "Test Plan","level": "Advanced" },
+  { "name": "Requirement Analysis","level": "Advanced" },
+  { "name": "Manual Testing","level": "Advanced" },
+  { "name": "Bug Reporting","level":"Advanced" },
+  { "name": "Agile & Scrum","level": "Advanced" },
+  { "name": "CI/CD","level": "Basic" },
+  { "name": "Version Control (Git)","level": "Intermediate" },
+  { "name": "SQL","level": "Intermediate" },
+  { "name": "Web Testing","level": "Advanced"},
+  { "name": "Mobile Testing iOS & Android","level": "Advanced"},
+  { "name": "API Testing","level": "Advanced"},
+  { "name": "Automation Testing","level": "Advanced"},
+  { "name": "Performance Testing","level": "Advanced"},
+  { "name": "Regression Testing","level": "Advanced"},
+  { "name": "Integration Testing","level": "Advanced"},
+  { "name": "Functional Testing","level": "Advanced"},
+  { "name": "Exploratory Testing","level": "Advanced"},
+  { "name": "Usability Testing","level": "Advanced"}
+]
+
+
+

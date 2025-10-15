@@ -1,0 +1,22 @@
+[
+    { "name": "Selenium" ,"level": "Advanced"},
+    { "name": "Katalon Studio","level": "Advanced" },
+    { "name": "TestNG" ,"level": "Advanced"},
+    { "name": "Postman","level": "Advanced" },
+    { "name": "Rest Assured" ,"level": "Advanced"},
+    { "name": "Newman","level": "Advanced" },
+    { "name": "Appium" ,"level": "Advanced"},
+    { "name": "Cypress","level": "Intermediate" },
+    { "name": "JMeter" ,"level": "Basic"},
+    { "name": "TestRail","level": "Intermediate" },
+    { "name": "JIRA" ,"level": "Advanced"},
+    { "name": "Git" ,"level": "Intermediate"},
+    { "name": "GitHub" ,"level": "Intermediate"},
+    { "name": "Jenkins" ,"level": "Basic"},
+    { "name": "Ms Office" ,"level": "Intermediate"},
+    { "name": "Google Docs" ,"level": "Intermediate"}
+  ]
+  
+  
+  
+  

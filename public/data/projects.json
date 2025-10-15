@@ -1,0 +1,15 @@
+[
+  {"title": "Java Spring Boot Portofolio", "description": "Personal project create API Backend Service for Management Citizen using Java Springboot", "link": "https://github.com/kennyRamadhan/SpringBoot_API_Management_Citizen_Portofolio"},
+  {"title": "Node.Js Portofolio", "description": "Personal project create API Backend Service for Personal Finance", "link": "https://github.com/kennyRamadhan/API_Personal_Finance_Node.Js_Portofolio"},
+  {"title": "Manual Testing Portofolio", "description": "Sample Test Case & Test Plan For Manual Testing","link": "https://drive.google.com/drive/folders/1urOHYKIElCxs0w8X_v7PpklHcQYvQYoU?usp=drive_link"},
+  {"title": "Selenium Java Mobile & Web Portofolio", "description": "Project handle Web & Mobile using  Appium,TestNG,WebDriver, & Extent Report", "link": "https://github.com/kennyRamadhan/selenium-java-testng-automation-portofolio"},
+  {"title": "Selenium Java API Portofolio", "description": "Project handle API using  TestNG,RestAssured & Extent Report", "link": "https://github.com/kennyRamadhan/selenium-java-testng-automation-framework-api-tests"},
+  {"title": "Katalon Studio Portofolio", "description": "Sample Katalon project with data driven testing", "link": "https://github.com/kennyRamadhan/katalon-automation-testing-portfolio"},
+  {"title": "Cypress Portofolio", "description": "Sample Cypress project UI & API using Cucumber", "link": "https://github.com/kennyRamadhan/cypress-ui-api-testing-framework"},
+  {"title": "Selenium Python Portofolio", "description": "Sample Selenium project using Py Test Python", "link": "https://github.com/kennyRamadhan/selenium-python-testng-automation-framework"},
+  {"title": "Cypress Portofolio", "description": "Sample Cypress project UI & API using Cucumber", "link": "https://github.com/kennyRamadhan/cypress-ui-api-testing-framework"},
+  {"title": "Robot Framework Portofolio", "description": "Sample Robot Framework project", "link": "https://github.com/kennyRamadhan/robot_framework_automation_testing_portofolio"}
+  
+]
+
+
