@@ -1,0 +1,89 @@
+{
+    "header": {
+      "about": "About",
+      "contact": "Contact",
+      "skills": "Skills",
+      "portfolio": "Portfolio",
+      "projects": "Projects",
+      "frameworks": "Frameworks",
+      "languages": "Languages"
+    },
+    "hero": {
+      "title": "Preventing bugs is better than finding them.",
+      "subtitle": "I believe quality starts at the very first line of code, not the last test case. Explore how I build reliable systems, mentor QA teams, and craft testing strategies that scale.",
+      "download": "Download CV",
+      "learnMore": "Learn More"
+    },
+    "about": {
+      "title": "About",
+      "paragraph1": "Hi, I’m Kenny Ramadhan, a Software Quality Assurance Engineer passionate about building reliable, high-quality software and helping teams deliver their best work.",
+      "paragraph2": "My journey into QA started unexpectedly during a Java Programming Bootcamp at Whiteopen Teknology. I was originally assigned as a Java Developer, but the team needed someone to handle testing, so I stepped in as a QA. That moment became the start of my QA career.",
+      "paragraph3": "Having a programming background gave me a huge advantage. It allows me to understand how things work behind the scenes from APIs to automation frameworks and design automation testing efficiently using tools like Selenium, Katalon, and Cypress.",
+      "paragraph4": "As a QA Lead Engineer, I guide and support other QAs to look beyond just bugs focusing on consistency, performance, and user experience. Great QA isn’t only about finding issues, but also understanding why they happen and preventing them.",
+      "paragraph5": "What sets me apart is that I care not only about business logic, but also about how an application is built — its structure, flow, and behavior. I even create side projects, building APIs with Spring Boot (Java) and Node.js, to explore and understand application architecture.",
+      "paragraph6": "For me, QA isn’t just a job it’s a mindset. It’s about curiosity, collaboration, and turning complex systems into reliable, meaningful, and enjoyable experiences for users."
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "projects": [
+        {
+          "title": "Java Spring Boot Portfolio",
+          "description": "Personal project creating an API backend service for citizen management using Java Spring Boot.",
+          "link": "https://github.com/kennyRamadhan/SpringBoot_API_Management_Citizen_Portofolio"
+        },
+        {
+          "title": "Node.js Portfolio",
+          "description": "Personal project creating an API backend service for personal finance management.",
+          "link": "https://github.com/kennyRamadhan/API_Personal_Finance_Node.Js_Portofolio"
+        },
+        {
+          "title": "Manual Testing Portfolio",
+          "description": "Sample Test Case and Test Plan for manual testing documentation.",
+          "link": "https://drive.google.com/drive/folders/1urOHYKIElCxs0w8X_v7PpklHcQYvQYoU?usp=drive_link"
+        },
+        {
+          "title": "Selenium Java Mobile & Web Portfolio",
+          "description": "Project handling Web & Mobile automation using Appium, TestNG, WebDriver, and Extent Report.",
+          "link": "https://github.com/kennyRamadhan/selenium-java-testng-automation-portofolio"
+        },
+        {
+          "title": "Selenium Java API Portfolio",
+          "description": "Project for API testing using TestNG, RestAssured, and Extent Report.",
+          "link": "https://github.com/kennyRamadhan/selenium-java-testng-automation-framework-api-tests"
+        },
+        {
+          "title": "Katalon Studio Portfolio",
+          "description": "Sample Katalon project with data-driven testing.",
+          "link": "https://github.com/kennyRamadhan/katalon-automation-testing-portfolio"
+        },
+        {
+          "title": "Cypress Portfolio",
+          "description": "Sample Cypress project for UI and API testing using Cucumber.",
+          "link": "https://github.com/kennyRamadhan/cypress-ui-api-testing-framework"
+        },
+        {
+          "title": "Selenium Python Portfolio",
+          "description": "Sample Selenium project using Pytest for Python automation.",
+          "link": "https://github.com/kennyRamadhan/selenium-python-testng-automation-framework"
+        },
+        {
+          "title": "Robot Framework Portfolio",
+          "description": "Sample Robot Framework project for automation testing.",
+          "link": "https://github.com/kennyRamadhan/robot_framework_automation_testing_portofolio"
+        }
+      ]
+    },
+    "experience": {
+        "name": "Work Experience"
+      },
+      "programming": {
+        "name": "Familiar Programming Languages"
+      },
+      "skills": {
+        "name": "Skills"
+      },
+      "frameworks": {
+        "name": "Frameworks Or Tools"
+      }
+  }
+  

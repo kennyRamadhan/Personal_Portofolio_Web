@@ -1,14 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation();
+
   const container = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-      },
+      transition: { staggerChildren: 0.3 },
     },
   };
 
@@ -33,16 +34,14 @@ export default function Hero() {
           variants={item}
           className="text-4xl md:text-5xl font-bold mb-6 text-primary leading-tight"
         >
-          Preventing bugs is better than finding them.
+          {t("hero.title")}
         </motion.h1>
 
         <motion.p
           variants={item}
           className="text-lg text-gray-400 mb-8 leading-relaxed max-w-lg"
         >
-          I believe quality starts at the very first line of code not the last
-          test case. Explore how I build reliable systems, mentor QA teams, and
-          craft testing strategies that scale.
+          {t("hero.subtitle")}
         </motion.p>
 
         {/* Tombol aksi */}
@@ -52,14 +51,14 @@ export default function Hero() {
             download
             className="px-6 py-3 rounded-lg bg-primary text-white font-medium shadow-md hover:bg-accent hover:shadow-accent/40 transition-all duration-300"
           >
-            Download CV
+            {t("hero.download")}
           </a>
 
           <a
             href="#about"
             className="px-6 py-3 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
           >
-            Learn More
+            {t("hero.learnMore")}
           </a>
         </motion.div>
       </motion.div>

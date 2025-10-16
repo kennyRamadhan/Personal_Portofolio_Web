@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
+import { useTranslation } from "react-i18next";
 export default function Skills() {
   const [skills, setSkills] = useState([]);
-
+  const { t } = useTranslation();
   useEffect(() => {
     fetch("/data/skills.json")
       .then(res => res.json())
@@ -19,7 +19,7 @@ export default function Skills() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <h2 className="text-3xl font-bold mb-6 text-primary">Skills</h2>
+      <h2 className="text-3xl font-bold mb-6 text-primary">{t("skills.name")}</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
         {skills.map((skill, idx) => (
           <div

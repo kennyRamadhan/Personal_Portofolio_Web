@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
+import { useTranslation } from "react-i18next";
 export default function Portfolio() {
 
   const [certification, setCertification] = useState([]);
-
+  const { t } = useTranslation();
   useEffect(() => {
     
 
@@ -24,7 +24,7 @@ export default function Portfolio() {
     >
 
       {/* Certification */}
-      <h2 className="text-3xl font-bold mb-6 text-primary">Known Programming Language</h2>
+      <h2 className="text-3xl font-bold mb-6 text-primary">{t("programming.name")}</h2>
       <div className="grid md:grid-cols-2 gap-6">
         {certification.map((cert, idx) => (
           <div

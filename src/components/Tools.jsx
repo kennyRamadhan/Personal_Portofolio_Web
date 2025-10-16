@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
+import { useTranslation } from "react-i18next";
 export default function Portfolio() {
   const [tools, setTools] = useState([]);
-
+  const { t } = useTranslation();
   useEffect(() => {
     fetch("/data/tools.json")
       .then((res) => res.json())
@@ -22,7 +22,7 @@ export default function Portfolio() {
 
 
       {/* Certification */}
-      <h2 className="text-3xl font-bold mb-6 text-primary">Frameworks Or Tools</h2>
+      <h2 className="text-3xl font-bold mb-6 text-primary">{t("frameworks.name")}</h2>
       <div className="grid md:grid-cols-2 gap-6">
         {tools.map((tool, idx) => (
           <div

@@ -1,20 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
 export default function Projects() {
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { t } = useTranslation();
 
-  useEffect(() => {
-    fetch("/data/projects.json")
-      .then(res => {
-        if (!res.ok) throw new Error("Failed to fetch projects");
-        return res.json();
-      })
-      .then(data => setProjects(data))
-      .catch(console.error)
-      .finally(() => setLoading(false));
-  }, []);
+  // Ambil data array dari i18n JSON menggunakan returnObjects
+  const projects = t("portfolio.projects", { returnObjects: true });
 
   return (
     <motion.section
@@ -24,31 +16,30 @@ export default function Projects() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <h2 className="text-3xl font-bold mb-6 text-primary">Portofolio</h2>
+      <h2 className="text-3xl font-bold mb-6 text-primary">
+        {t("portfolio.title")}
+      </h2>
 
-      {loading ? (
-        <p>Loading projects...</p>
-      ) : (
-        <div className="grid md:grid-cols-2 gap-6">
-          {projects.map((proj, idx) => (
-            <div
-              key={idx}
-              className="p-4 rounded-lg shadow-lg bg-gray-800 hover:scale-105 hover:shadow-xl transition-transform"
+      <div className="grid md:grid-cols-2 gap-6">
+        {projects.map((proj, idx) => (
+          <motion.div
+            key={idx}
+            className="p-4 rounded-lg shadow-lg bg-gray-800 hover:scale-105 hover:shadow-xl transition-transform"
+            whileHover={{ scale: 1.05 }}
+          >
+            <h3 className="font-semibold text-accent mb-2">{proj.title}</h3>
+            <p className="text-gray-400 mb-2">{proj.description}</p>
+            <a
+              href={proj.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
             >
-              <h3 className="font-semibold text-accent mb-2">{proj.title}</h3>
-              <p className="text-gray-400 mb-2">{proj.description}</p>
-              <a
-                href={proj.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:underline"
-              >
-                View Project
-              </a>
-            </div>
-          ))}
-        </div>
-      )}
+              {t("portfolio.viewProject", "View Project")}
+            </a>
+          </motion.div>
+        ))}
+      </div>
     </motion.section>
   );
 }

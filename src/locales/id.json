@@ -1,0 +1,89 @@
+{
+    "header": {
+      "about": "Tentang",
+      "contact": "Kontak",
+      "skills": "Keahlian",
+      "portfolio": "Portofolio",
+      "projects": "Proyek",
+      "frameworks": "Kerangka Kerja",
+      "languages": "Bahasa"
+    },
+    "hero": {
+      "title": "Mencegah bug lebih baik daripada menemukannya.",
+      "subtitle": "Saya percaya kualitas dimulai dari baris kode pertama, bukan dari test case terakhir. Jelajahi bagaimana saya membangun sistem yang andal, membimbing tim QA, dan merancang strategi pengujian yang skalabel.",
+      "download": "Unduh CV",
+      "learnMore": "Pelajari Lebih Lanjut"
+    },
+    "about": {
+      "title": "Tentang",
+      "paragraph1": "Hai, saya Kenny Ramadhan, seorang Software Quality Assurance Engineer yang bersemangat dalam membangun perangkat lunak berkualitas tinggi dan membantu tim mencapai hasil terbaik mereka.",
+      "paragraph2": "Perjalanan saya di dunia QA dimulai secara tak terduga saat mengikuti Bootcamp Pemrograman Java di Whiteopen Teknologi. Awalnya saya ditugaskan sebagai Java Developer, namun karena kebutuhan tim, saya beralih menjadi QA. Dari situlah karier QA saya dimulai.",
+      "paragraph3": "Latar belakang dasar pemrograman yang saya miliki memberi saya keunggulan besar. Saya memahami cara kerja sistem dari balik layar, mulai dari API hingga framework otomasi, serta mampu merancang pengujian otomatis dengan efisien menggunakan Selenium, Katalon, dan Cypress.",
+      "paragraph4": "Sebagai QA Lead Engineer, saya membimbing QA lain untuk tidak hanya fokus pada bug, tetapi juga pada konsistensi, performa, dan pengalaman pengguna. QA yang hebat bukan hanya menemukan masalah, tetapi juga memahami akar penyebab dan mencegahnya.",
+      "paragraph5": "Yang membedakan saya adalah perhatian terhadap logika bisnis sekaligus cara aplikasi dibangun dari struktur, alur, hingga perilakunya. Saya juga membuat proyek sampingan seperti API menggunakan Spring Boot (Java) dan Node.js untuk memahami arsitektur aplikasi lebih dalam.",
+      "paragraph6": "Bagi saya, QA bukan sekadar pekerjaan ini adalah pola pikir. Tentang rasa ingin tahu, kolaborasi, dan menjadikan sistem kompleks menjadi pengalaman yang andal dan bermakna bagi pengguna."
+    },
+    "portfolio": {
+      "title": "Portofolio",
+      "projects": [
+        {
+          "title": "Portofolio Java Spring Boot",
+          "description": "Proyek pribadi membuat layanan API backend untuk manajemen penduduk menggunakan Java Spring Boot.",
+          "link": "https://github.com/kennyRamadhan/SpringBoot_API_Management_Citizen_Portofolio"
+        },
+        {
+          "title": "Portofolio Node.js",
+          "description": "Proyek pribadi membuat layanan API backend untuk manajemen keuangan pribadi.",
+          "link": "https://github.com/kennyRamadhan/API_Personal_Finance_Node.Js_Portofolio"
+        },
+        {
+          "title": "Portofolio Pengujian Manual",
+          "description": "Contoh Test Case dan Test Plan untuk dokumentasi pengujian manual.",
+          "link": "https://drive.google.com/drive/folders/1urOHYKIElCxs0w8X_v7PpklHcQYvQYoU?usp=drive_link"
+        },
+        {
+          "title": "Portofolio Selenium Java Mobile & Web",
+          "description": "Proyek automasi Web & Mobile menggunakan Appium, TestNG, WebDriver, dan Extent Report.",
+          "link": "https://github.com/kennyRamadhan/selenium-java-testng-automation-portofolio"
+        },
+        {
+          "title": "Portofolio Selenium Java API",
+          "description": "Proyek pengujian API menggunakan TestNG, RestAssured, dan Extent Report.",
+          "link": "https://github.com/kennyRamadhan/selenium-java-testng-automation-framework-api-tests"
+        },
+        {
+          "title": "Portofolio Katalon Studio",
+          "description": "Proyek contoh Katalon dengan pengujian berbasis data.",
+          "link": "https://github.com/kennyRamadhan/katalon-automation-testing-portfolio"
+        },
+        {
+          "title": "Portofolio Cypress",
+          "description": "Proyek contoh Cypress untuk pengujian UI dan API menggunakan Cucumber.",
+          "link": "https://github.com/kennyRamadhan/cypress-ui-api-testing-framework"
+        },
+        {
+          "title": "Portofolio Selenium Python",
+          "description": "Proyek contoh Selenium menggunakan Pytest untuk automasi Python.",
+          "link": "https://github.com/kennyRamadhan/selenium-python-testng-automation-framework"
+        },
+        {
+          "title": "Portofolio Robot Framework",
+          "description": "Proyek contoh Robot Framework untuk pengujian automasi.",
+          "link": "https://github.com/kennyRamadhan/robot_framework_automation_testing_portofolio"
+        }
+      ]
+    },
+    "experience": {
+        "name": "Pengalaman Kerja"
+      },
+      "programming": {
+        "name": "Bahasa Pemrograman yang Dikuasai"
+      },
+      "skills": {
+        "name": "Kemampuan Yang Dimiliki"
+      },
+      "frameworks": {
+        "name": "Frameworks Atau Alat Yang Dikuasai"
+      }
+  }
+  
