@@ -19,7 +19,7 @@ export default function Header() {
   ];
 
   const desktopMain = ["about", "contact"];
-  const desktopMore = sections.filter(sec => !desktopMain.includes(sec.id));
+  const desktopMore = sections.filter((sec) => !desktopMain.includes(sec.id));
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -33,13 +33,15 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 w-full z-50 p-4 md:p-8 
       bg-gradient-to-r from-primary to-secondary text-white 
-      transition-all duration-500 ${scrolled ? "bg-opacity-100 shadow-lg" : "bg-opacity-80"}`}
+      transition-all duration-500 ${
+        scrolled ? "bg-opacity-100 shadow-lg" : "bg-opacity-80"
+      }`}
     >
       <nav className="flex items-center justify-between relative">
-        {/* ==== DESKTOP LEFT ==== */}
-        <div className="hidden md:flex items-center space-x-6 text-lg font-medium">
-          {desktopMain.map(id => {
-            const sec = sections.find(s => s.id === id);
+        {/* ==== LEFT SIDE (VISIBLE BOTH MOBILE & DESKTOP) ==== */}
+        <div className="flex items-center space-x-4 md:space-x-6 text-lg font-medium">
+          {desktopMain.map((id) => {
+            const sec = sections.find((s) => s.id === id);
             return (
               <a
                 key={id}
@@ -52,9 +54,26 @@ export default function Header() {
           })}
         </div>
 
-        {/* ==== DESKTOP RIGHT ==== */}
-        <div className="relative ml-auto flex items-center space-x-3">
-          {/* Dropdown (More menu) */}
+        {/* ==== RIGHT SIDE ==== */}
+        <div className="flex items-center space-x-4 md:space-x-6 ml-auto">
+          {/* ==== LANGUAGE SWITCHER (ALWAYS VISIBLE) ==== */}
+          <div className="flex items-center space-x-2 text-sm font-medium">
+            <button
+              onClick={() => changeLanguage("en")}
+              className="hover:text-accent transition-colors"
+            >
+              EN
+            </button>
+            <span className="opacity-70">|</span>
+            <button
+              onClick={() => changeLanguage("id")}
+              className="hover:text-accent transition-colors"
+            >
+              ID
+            </button>
+          </div>
+
+          {/* ==== DESKTOP HAMBURGER (MORE MENU) ==== */}
           <div className="hidden md:block relative">
             <button
               onClick={() => setDesktopOpen(!desktopOpen)}
@@ -64,7 +83,7 @@ export default function Header() {
             </button>
             {desktopOpen && (
               <div className="absolute right-0 mt-2 bg-primary rounded-lg shadow-lg flex flex-col p-3 space-y-2 min-w-[150px] z-50 transition-all duration-300">
-                {desktopMore.map(sec => (
+                {desktopMore.map((sec) => (
                   <a
                     key={sec.id}
                     href={`#${sec.id}`}
@@ -78,22 +97,6 @@ export default function Header() {
             )}
           </div>
 
-          {/* Language Switcher */}
-          <div className="hidden md:flex items-center space-x-2">
-            <button
-              onClick={() => changeLanguage("en")}
-              className="hover:text-accent transition-colors"
-            >
-              EN
-            </button>
-            <button
-              onClick={() => changeLanguage("id")}
-              className="hover:text-accent transition-colors"
-            >
-              ID
-            </button>
-          </div>
-
           {/* ==== MOBILE HAMBURGER ==== */}
           <div className="md:hidden relative">
             <button
@@ -103,43 +106,9 @@ export default function Header() {
               <Menu size={24} />
             </button>
 
-            {/* ==== MOBILE MENU ==== */}
             {isOpen && (
               <div className="absolute right-0 top-full mt-2 w-64 bg-primary rounded-b-lg shadow-lg flex flex-col space-y-2 p-4 z-50 transition-all duration-300">
-                {/* Lang Switcher on mobile */}
-                <div className="flex justify-center space-x-3 mb-2">
-                  <button
-                    onClick={() => changeLanguage("en")}
-                    className="hover:text-accent transition-colors"
-                  >
-                    EN
-                  </button>
-                  <button
-                    onClick={() => changeLanguage("id")}
-                    className="hover:text-accent transition-colors"
-                  >
-                    ID
-                  </button>
-                </div>
-
-                {/* Always show About & Contact on mobile */}
-                {desktopMain.map(id => {
-                  const sec = sections.find(s => s.id === id);
-                  return (
-                    <a
-                      key={id}
-                      href={`#${id}`}
-                      className="text-white hover:text-accent transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {sec.label}
-                    </a>
-                  );
-                })}
-
-                {/* Show other sections below */}
-                <hr className="border-gray-600 my-2" />
-                {desktopMore.map(sec => (
+                {desktopMore.map((sec) => (
                   <a
                     key={sec.id}
                     href={`#${sec.id}`}
