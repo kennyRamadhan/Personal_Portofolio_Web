@@ -5,8 +5,8 @@
       "skills": "Keahlian",
       "portfolio": "Portofolio",
       "projects": "Proyek",
-      "frameworks": "Kerangka Kerja",
-      "languages": "Bahasa"
+      "frameworks": "Frameworks",
+      "languages": "Bahasa Pemrograman"
     },
     "hero": {
       "title": "Mencegah bug lebih baik daripada menemukannya.",
