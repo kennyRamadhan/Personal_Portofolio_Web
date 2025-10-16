@@ -31,11 +31,12 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 p-8 bg-gradient-to-r from-primary to-secondary text-white 
-                  transition-colors duration-500 ${scrolled ? "bg-opacity-100" : "bg-opacity-80"}`}
+      className={`fixed top-0 left-0 w-full z-50 p-4 md:p-8 
+      bg-gradient-to-r from-primary to-secondary text-white 
+      transition-all duration-500 ${scrolled ? "bg-opacity-100 shadow-lg" : "bg-opacity-80"}`}
     >
       <nav className="flex items-center justify-between relative">
-        {/* Desktop left */}
+        {/* ==== DESKTOP LEFT ==== */}
         <div className="hidden md:flex items-center space-x-6 text-lg font-medium">
           {desktopMain.map(id => {
             const sec = sections.find(s => s.id === id);
@@ -51,9 +52,9 @@ export default function Header() {
           })}
         </div>
 
-        {/* Right: Desktop Hamburger + Language Switcher */}
+        {/* ==== DESKTOP RIGHT ==== */}
         <div className="relative ml-auto flex items-center space-x-3">
-          {/* Desktop Hamburger */}
+          {/* Dropdown (More menu) */}
           <div className="hidden md:block relative">
             <button
               onClick={() => setDesktopOpen(!desktopOpen)}
@@ -78,7 +79,7 @@ export default function Header() {
           </div>
 
           {/* Language Switcher */}
-          <div className="flex items-center space-x-2">
+          <div className="hidden md:flex items-center space-x-2">
             <button
               onClick={() => changeLanguage("en")}
               className="hover:text-accent transition-colors"
@@ -93,7 +94,7 @@ export default function Header() {
             </button>
           </div>
 
-          {/* Mobile Hamburger */}
+          {/* ==== MOBILE HAMBURGER ==== */}
           <div className="md:hidden relative">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -101,9 +102,44 @@ export default function Header() {
             >
               <Menu size={24} />
             </button>
+
+            {/* ==== MOBILE MENU ==== */}
             {isOpen && (
               <div className="absolute right-0 top-full mt-2 w-64 bg-primary rounded-b-lg shadow-lg flex flex-col space-y-2 p-4 z-50 transition-all duration-300">
-                {sections.map(sec => (
+                {/* Lang Switcher on mobile */}
+                <div className="flex justify-center space-x-3 mb-2">
+                  <button
+                    onClick={() => changeLanguage("en")}
+                    className="hover:text-accent transition-colors"
+                  >
+                    EN
+                  </button>
+                  <button
+                    onClick={() => changeLanguage("id")}
+                    className="hover:text-accent transition-colors"
+                  >
+                    ID
+                  </button>
+                </div>
+
+                {/* Always show About & Contact on mobile */}
+                {desktopMain.map(id => {
+                  const sec = sections.find(s => s.id === id);
+                  return (
+                    <a
+                      key={id}
+                      href={`#${id}`}
+                      className="text-white hover:text-accent transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {sec.label}
+                    </a>
+                  );
+                })}
+
+                {/* Show other sections below */}
+                <hr className="border-gray-600 my-2" />
+                {desktopMore.map(sec => (
                   <a
                     key={sec.id}
                     href={`#${sec.id}`}
