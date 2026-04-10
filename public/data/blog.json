@@ -1,0 +1,29 @@
+[
+  {
+    "title": "How I Built 300+ Automated Tests from Scratch as a Solo QA",
+    "titleId": "Bagaimana Saya Membangun 300+ Test Otomatis dari Nol Sebagai Solo QA",
+    "summary": "A practical guide on building comprehensive automation test suites covering API, web, and mobile platforms when you are the only QA in the team.",
+    "summaryId": "Panduan praktis membangun automation test suite yang komprehensif untuk API, web, dan mobile saat kamu satu-satunya QA di tim.",
+    "tags": ["Automation", "Testing Strategy", "Solo QA"],
+    "date": "Coming Soon",
+    "url": "#"
+  },
+  {
+    "title": "Regression Testing Strategy for Multi-Region Applications",
+    "titleId": "Strategi Regression Testing untuk Aplikasi Multi-Region",
+    "summary": "Lessons learned from testing an application serving Indonesia, Thailand, and Singapore with different business rules per region.",
+    "summaryId": "Pelajaran dari menguji aplikasi yang melayani Indonesia, Thailand, dan Singapura dengan aturan bisnis berbeda per region.",
+    "tags": ["Regression", "Multi-Region", "Strategy"],
+    "date": "Coming Soon",
+    "url": "#"
+  },
+  {
+    "title": "From Manual QA to Automation: My 5-Year Journey",
+    "titleId": "Dari Manual QA ke Automation: Perjalanan 5 Tahun Saya",
+    "summary": "How I transitioned from a manual QA role to building automation frameworks from scratch at 4 different companies.",
+    "summaryId": "Bagaimana saya bertransisi dari QA manual ke membangun framework otomasi dari nol di 4 perusahaan berbeda.",
+    "tags": ["Career", "Automation", "Growth"],
+    "date": "Coming Soon",
+    "url": "#"
+  }
+]

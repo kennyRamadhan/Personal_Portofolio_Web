@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { Download, ArrowDown } from "lucide-react";
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -21,8 +22,9 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="flex flex-col md:flex-row items-center justify-between min-h-screen p-8 mt-16 bg-gray-900 text-gray-300"
+      className="flex flex-col md:flex-row items-center justify-between min-h-screen px-4 py-8 sm:px-6 lg:px-8 mt-16 bg-gray-900 text-gray-300"
     >
+      <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between">
       {/* Teks kiri */}
       <motion.div
         className="md:w-1/2 mb-8 md:mb-0"
@@ -32,7 +34,7 @@ export default function Hero() {
       >
         <motion.h1
           variants={item}
-          className="text-4xl md:text-5xl font-bold mb-6 text-primary leading-tight"
+          className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 text-primary leading-tight"
         >
           {t("hero.title")}
         </motion.h1>
@@ -45,20 +47,25 @@ export default function Hero() {
         </motion.p>
 
         {/* Tombol aksi */}
-        <motion.div variants={item} className="flex gap-4">
-          <a
-            href="/assets/docs/Kenny-Ramadhan-CV.pdf"
-            download
-            className="px-6 py-3 rounded-lg bg-primary text-white font-medium shadow-md hover:bg-accent hover:shadow-accent/40 transition-all duration-300"
+        <motion.div variants={item} className="flex flex-wrap gap-4">
+          <button
+            onClick={() => {
+              const el = document.getElementById("featured-work");
+              if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+            className="px-6 py-3 rounded-lg bg-primary text-white font-medium shadow-md hover:bg-accent hover:shadow-accent/40 transition-all duration-300 inline-flex items-center gap-2"
           >
-            {t("hero.download")}
-          </a>
+            <ArrowDown size={18} />
+            {t("hero.viewWork")}
+          </button>
 
           <a
-            href="#about"
-            className="px-6 py-3 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
+            href="/assets/docs/Kenny-Ramadhan-CV.pdf"
+            download="Kenny-Ramadhan-CV.pdf"
+            className="px-6 py-3 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 inline-flex items-center gap-2"
           >
-            {t("hero.learnMore")}
+            <Download size={18} />
+            {t("hero.download")}
           </a>
         </motion.div>
       </motion.div>
@@ -77,9 +84,10 @@ export default function Hero() {
           alt="Profile"
           loading="lazy"
           decoding="async"
-          className="relative w-64 md:w-96 h-auto object-cover rounded-[1.25rem] transition-all duration-700 ease-in-out hover:scale-[1.02] shadow-lg"
+          className="relative w-52 sm:w-64 md:w-96 max-w-full h-auto object-cover rounded-[1.25rem] transition-all duration-700 ease-in-out hover:scale-[1.02] shadow-lg"
         />
       </motion.div>
+      </div>
     </section>
   );
 }

@@ -1,4 +1,16 @@
 {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "achievements": "Achievements",
+      "skills": "Skills",
+      "experience": "Experience",
+      "testimonials": "What Teammates Say",
+      "featuredWork": "Featured Work",
+      "portfolio": "Portfolio",
+      "insights": "Insights",
+      "contact": "Contact"
+    },
     "header": {
       "about": "About",
       "contact": "Contact",
@@ -9,19 +21,19 @@
       "languages": "Programming"
     },
     "hero": {
-      "title": "Preventing bugs is better than finding them.",
-      "subtitle": "I believe quality starts at the very first line of code, not the last test case. Explore how I build reliable systems, mentor QA teams, and craft testing strategies that scale.",
+      "title": "Building Reliable Software by Reducing Bugs Before They Reach Production",
+      "subtitle": "Senior QA Engineer with 5+ years of experience in automation (API, Web, Mobile), focused on improving release quality, accelerating testing cycles, and minimizing production defects.",
       "download": "Download CV",
-      "learnMore": "Learn More"
+      "viewWork": "View My Work"
     },
     "about": {
       "title": "About",
-      "paragraph1": "Hi, I’m Kenny Ramadhan, a Software Quality Assurance Engineer passionate about building reliable, high-quality software and helping teams deliver their best work.",
-      "paragraph2": "My journey into QA started unexpectedly during a Java Programming Bootcamp at Whiteopen Teknology. I was originally assigned as a Java Developer, but the team needed someone to handle testing, so I stepped in as a QA. That moment became the start of my QA career.",
-      "paragraph3": "Having a programming background gave me a huge advantage. It allows me to understand how things work behind the scenes from APIs to automation frameworks and design automation testing efficiently using tools like Selenium, Katalon, and Cypress.",
-      "paragraph4": "As a QA Lead Engineer, I guide and support other QAs to look beyond just bugs focusing on consistency, performance, and user experience. Great QA isn’t only about finding issues, but also understanding why they happen and preventing them.",
-      "paragraph5": "What sets me apart is that I care not only about business logic, but also about how an application is built — its structure, flow, and behavior. I even create side projects, building APIs with Spring Boot (Java) and Node.js, to explore and understand application architecture.",
-      "paragraph6": "For me, QA isn’t just a job it’s a mindset. It’s about curiosity, collaboration, and turning complex systems into reliable, meaningful, and enjoyable experiences for users."
+      "paragraph1": "I am a Senior QA Engineer with over 5 years of experience across Web, API, and Mobile testing, specializing in both manual and automation testing.",
+      "paragraph2": "My core focus is not just finding bugs, but preventing them by improving test strategy, increasing automation coverage, and ensuring better collaboration between QA, developers, and product teams.",
+      "paragraph3": "Currently at Noovoleum, I serve as the sole QA engineer for UCO Collect, a multi-region application serving Indonesia, Thailand, and Singapore. I own the entire QA lifecycle, building 300+ automated test cases from scratch across API, web, and mobile platforms.",
+      "paragraph4": "Throughout my career, I have worked on multi-product environments and complex systems, where I contributed to reducing regression time, improving release confidence, and increasing overall product quality. I have hands-on experience with automation tools such as Selenium, Cypress, Playwright, and Katalon, along with performance testing using JMeter and API validation using Postman.",
+      "paragraph5": "Beyond execution, I actively contribute to designing scalable test strategies, mentoring junior QA engineers, and improving QA processes and standards.",
+      "paragraph6": "I aim to deliver not just tested features, but reliable products."
     },
     "portfolio": {
       "title": "Portfolio",
@@ -80,13 +92,60 @@
         "name": "Familiar Programming Languages"
       },
       "skills": {
-        "name": "Skills"
+        "name": "Skills",
+        "coreQaExpertise": "Core QA Expertise",
+        "automation": "Automation",
+        "apiTesting": "API Testing",
+        "performanceTesting": "Performance Testing",
+        "ciCdAndTools": "CI/CD & Tools",
+        "programming": "Programming",
+        "documentationAndReporting": "Documentation & Reporting",
+        "database": "Database"
       },
       "frameworks": {
         "name": "Frameworks Or Tools"
       },
       "contacts": {
-        "name": "Contacts Me"
+        "name": "Let's Build Better Quality Software Together",
+        "tagline": "Open for Senior QA / QA Automation roles. Available for full-time opportunities or freelance collaboration."
+      },
+      "testimonials": {
+        "heading": "What Teammates Say",
+        "disclaimer": "Paraphrased feedback based on real working relationships. Names withheld for privacy."
+      },
+      "blog": {
+        "heading": "Insights"
+      },
+      "stats": {
+        "title": "Achievements",
+        "yearsExperience": "Years Experience in QA across Web, API, and Mobile",
+        "automatedTests": "Automated Tests built using Cypress, Selenium, Playwright, and Katalon",
+        "regressionReduction": "Reduction in Regression Time through automation and improved coverage",
+        "productsTested": "Products Tested across multi-product environments and complex systems"
+      },
+      "caseStudy": {
+        "heading": "Featured Work",
+        "problem": "Problem",
+        "action": "Action",
+        "result": "Result",
+        "uco": {
+          "title": "UCO Collect — Multi-Region QA Ownership",
+          "problem": "Multiple regions (Indonesia, Thailand, Singapore) with inconsistent behavior and high regression risk. No dedicated QA team, requiring a single engineer to own the entire quality lifecycle.",
+          "action": "Designed structured test scenarios across regions. Built 300+ automated test cases from scratch spanning API, web, and mobile (iOS & Android). Implemented multi-environment validation (Dev, QA, Staging, Production). Established detailed bug reporting with region and environment scope annotations.",
+          "result": "Increased release confidence across all 3 regions. Reduced manual regression effort significantly. Improved consistency and quality across regions and platforms."
+        },
+        "bri": {
+          "title": "BRI Banking Suite — Multi-Project QA",
+          "problem": "Complex banking system with multiple modules (Ceria, Senyum, Sabrina Bot, Direct Debit, Fund Transfer, Briva) and frequent releases requiring thorough quality assurance.",
+          "action": "Created and maintained automation scripts using Katalon Studio and Selenium. Performed end-to-end, regression, and integration testing across all modules. Coordinated closely with developers and BA to ensure comprehensive coverage.",
+          "result": "Achieved approximately 70% automation coverage. Identified 50+ critical issues before release. Reduced production defects and improved feature stability across releases."
+        },
+        "qoin": {
+          "title": "Fintech E-Wallet — Flutter App Quality",
+          "problem": "Critical financial features in e-wallet applications requiring high accuracy and stability. Bugs in transaction flows could mean real money loss for users.",
+          "action": "Conducted API and mobile testing with focus on transaction accuracy. Validated transaction flows and edge cases across multiple e-wallet products. Built automation suites covering 150+ test scenarios using Selenium and Katalon Studio.",
+          "result": "Contributed to 30% reduction in post-release defects. Improved reliability of transaction features. Reduced critical bugs reaching production."
+        }
       }
   }
   

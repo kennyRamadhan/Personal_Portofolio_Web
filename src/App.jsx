@@ -6,8 +6,9 @@ import Portfolio from "./components/Portofolio"
 import Contact from "./components/Contact";
 import Header from "./components/Header";
 import Project from "./components/Project";
-import Tools from "./components/Tools";
-import Language from "./components/Language";
+import Stats from "./components/Stats";
+import CaseStudy from "./components/CaseStudy";
+import Blog from "./components/Blog";
 export default function App() {
   // Ubah default darkMode menjadi true
   const [darkMode, setDarkMode] = useState(true);
@@ -23,11 +24,12 @@ export default function App() {
       <Header />
       <Hero />
       <About/>
+      <Stats />
       <Skills />
-      <Tools/>
-      <Language/>
+      <CaseStudy />
       <Portfolio />
       <Project />
+      <Blog />
       <Contact />
     </div>
   );

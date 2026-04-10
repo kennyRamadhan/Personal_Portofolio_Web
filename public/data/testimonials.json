@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Project Manager",
+    "role": "PM at previous company",
+    "company": "",
+    "quote": "Kenny is very thorough in his testing approach. He does not just find bugs, he digs into the root cause and helps the team understand why it happened. That kind of initiative really helps us ship with more confidence.",
+    "quoteId": "Kenny sangat teliti dalam pendekatan testing-nya. Dia tidak hanya menemukan bug, tapi menggali akar masalahnya dan membantu tim memahami mengapa itu terjadi. Inisiatif seperti itu sangat membantu kami merilis dengan lebih percaya diri."
+  },
+  {
+    "name": "Software Developer",
+    "role": "Developer colleague",
+    "company": "",
+    "quote": "His bug reports are some of the clearest I have seen. Detailed reproduction steps, environment info, expected vs actual results. It makes fixing issues so much faster and saves a lot of back-and-forth.",
+    "quoteId": "Laporan bug-nya adalah yang paling jelas yang pernah saya lihat. Langkah reproduksi detail, info environment, expected vs actual results. Ini membuat perbaikan masalah jauh lebih cepat dan menghemat banyak komunikasi bolak-balik."
+  },
+  {
+    "name": "Junior QA",
+    "role": "QA team member",
+    "company": "",
+    "quote": "Kenny mentored me when I first joined the QA team. He taught me how to think about edge cases and design test scenarios that actually catch real issues, not just follow the happy path.",
+    "quoteId": "Kenny membimbing saya saat pertama kali bergabung di tim QA. Dia mengajarkan saya cara berpikir tentang edge case dan merancang skenario pengujian yang benar-benar menangkap masalah nyata, bukan hanya mengikuti happy path."
+  }
+]

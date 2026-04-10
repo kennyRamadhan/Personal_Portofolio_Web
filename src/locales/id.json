@@ -1,4 +1,16 @@
 {
+    "nav": {
+      "home": "Beranda",
+      "about": "Tentang",
+      "achievements": "Pencapaian",
+      "skills": "Keahlian",
+      "experience": "Pengalaman",
+      "testimonials": "Kata Rekan Kerja",
+      "featuredWork": "Proyek Unggulan",
+      "portfolio": "Portofolio",
+      "insights": "Artikel",
+      "contact": "Kontak"
+    },
     "header": {
       "about": "Tentang",
       "contact": "Kontak",
@@ -9,19 +21,19 @@
       "languages": "Bahasa Pemrograman"
     },
     "hero": {
-      "title": "Mencegah bug lebih baik daripada menemukannya.",
-      "subtitle": "Saya percaya kualitas dimulai dari baris kode pertama, bukan dari test case terakhir. Jelajahi bagaimana saya membangun sistem yang andal, membimbing tim QA, dan merancang strategi pengujian yang skalabel.",
+      "title": "Membangun Perangkat Lunak Andal dengan Mengurangi Bug Sebelum Mencapai Produksi",
+      "subtitle": "Senior QA Engineer dengan 5+ tahun pengalaman di automation (API, Web, Mobile), berfokus pada peningkatan kualitas rilis, percepatan siklus pengujian, dan meminimalkan defect di produksi.",
       "download": "Unduh CV",
-      "learnMore": "Pelajari Lebih Lanjut"
+      "viewWork": "Lihat Karya Saya"
     },
     "about": {
       "title": "Tentang",
-      "paragraph1": "Hai, saya Kenny Ramadhan, seorang Software Quality Assurance Engineer yang bersemangat dalam membangun perangkat lunak berkualitas tinggi dan membantu tim mencapai hasil terbaik mereka.",
-      "paragraph2": "Perjalanan saya di dunia QA dimulai secara tak terduga saat mengikuti Bootcamp Pemrograman Java di Whiteopen Teknologi. Awalnya saya ditugaskan sebagai Java Developer, namun karena kebutuhan tim, saya beralih menjadi QA. Dari situlah karier QA saya dimulai.",
-      "paragraph3": "Latar belakang dasar pemrograman yang saya miliki memberi saya keunggulan besar. Saya memahami cara kerja sistem dari balik layar, mulai dari API hingga framework otomasi, serta mampu merancang pengujian otomatis dengan efisien menggunakan Selenium, Katalon, dan Cypress.",
-      "paragraph4": "Sebagai QA Lead Engineer, saya membimbing QA lain untuk tidak hanya fokus pada bug, tetapi juga pada konsistensi, performa, dan pengalaman pengguna. QA yang hebat bukan hanya menemukan masalah, tetapi juga memahami akar penyebab dan mencegahnya.",
-      "paragraph5": "Yang membedakan saya adalah perhatian terhadap logika bisnis sekaligus cara aplikasi dibangun dari struktur, alur, hingga perilakunya. Saya juga membuat proyek sampingan seperti API menggunakan Spring Boot (Java) dan Node.js untuk memahami arsitektur aplikasi lebih dalam.",
-      "paragraph6": "Bagi saya, QA bukan sekadar pekerjaan ini adalah pola pikir. Tentang rasa ingin tahu, kolaborasi, dan menjadikan sistem kompleks menjadi pengalaman yang andal dan bermakna bagi pengguna."
+      "paragraph1": "Saya adalah Senior QA Engineer dengan lebih dari 5 tahun pengalaman di pengujian Web, API, dan Mobile, dengan spesialisasi di manual testing dan automation testing.",
+      "paragraph2": "Fokus utama saya bukan hanya menemukan bug, tetapi mencegahnya dengan meningkatkan strategi pengujian, menambah cakupan otomasi, dan memastikan kolaborasi yang lebih baik antara QA, developer, dan tim produk.",
+      "paragraph3": "Saat ini di Noovoleum, saya berperan sebagai satu-satunya QA engineer untuk UCO Collect, aplikasi multi-region yang melayani Indonesia, Thailand, dan Singapura. Saya mengelola seluruh siklus QA, membangun 300+ automated test cases dari nol untuk platform API, web, dan mobile.",
+      "paragraph4": "Sepanjang karir saya, saya telah bekerja di lingkungan multi-produk dan sistem kompleks, di mana saya berkontribusi dalam mengurangi waktu regresi, meningkatkan kepercayaan rilis, dan meningkatkan kualitas produk secara keseluruhan. Saya memiliki pengalaman langsung dengan tools otomasi seperti Selenium, Cypress, Playwright, dan Katalon, serta performance testing menggunakan JMeter dan validasi API menggunakan Postman.",
+      "paragraph5": "Di luar eksekusi, saya aktif berkontribusi dalam merancang strategi pengujian yang scalable, membimbing QA engineer junior, dan meningkatkan proses serta standar QA.",
+      "paragraph6": "Tujuan saya bukan hanya menguji fitur, tetapi menghasilkan produk yang andal."
     },
     "portfolio": {
       "title": "Portofolio",
@@ -80,13 +92,60 @@
         "name": "Bahasa Pemrograman yang Dikuasai"
       },
       "skills": {
-        "name": "Kemampuan Yang Dimiliki"
+        "name": "Kemampuan Yang Dimiliki",
+        "coreQaExpertise": "Keahlian Utama QA",
+        "automation": "Otomasi",
+        "apiTesting": "Pengujian API",
+        "performanceTesting": "Pengujian Performa",
+        "ciCdAndTools": "CI/CD & Alat",
+        "programming": "Pemrograman",
+        "documentationAndReporting": "Dokumentasi & Pelaporan",
+        "database": "Database"
       },
       "frameworks": {
         "name": "Frameworks Atau Alat Yang Dikuasai"
       },
       "contacts": {
-        "name": "Hubungi Saya"
+        "name": "Mari Bangun Perangkat Lunak Berkualitas Lebih Baik Bersama",
+        "tagline": "Terbuka untuk posisi Senior QA / QA Automation. Tersedia untuk peluang full-time atau kolaborasi freelance."
+      },
+      "testimonials": {
+        "heading": "Kata Rekan Kerja",
+        "disclaimer": "Feedback yang diparafrase berdasarkan hubungan kerja nyata. Nama dirahasiakan untuk privasi."
+      },
+      "blog": {
+        "heading": "Artikel & Wawasan"
+      },
+      "stats": {
+        "title": "Pencapaian",
+        "yearsExperience": "Tahun Pengalaman QA di Web, API, dan Mobile",
+        "automatedTests": "Test Otomatis dibangun menggunakan Cypress, Selenium, Playwright, dan Katalon",
+        "regressionReduction": "Pengurangan Waktu Regresi melalui otomasi dan peningkatan cakupan",
+        "productsTested": "Produk Diuji di lingkungan multi-produk dan sistem kompleks"
+      },
+      "caseStudy": {
+        "heading": "Proyek Unggulan",
+        "problem": "Masalah",
+        "action": "Aksi",
+        "result": "Hasil",
+        "uco": {
+          "title": "UCO Collect — Kepemilikan QA Multi-Region",
+          "problem": "Beberapa region (Indonesia, Thailand, Singapura) dengan perilaku tidak konsisten dan risiko regresi tinggi. Tidak ada tim QA khusus, membutuhkan satu engineer untuk mengelola seluruh siklus kualitas.",
+          "action": "Merancang skenario pengujian terstruktur lintas region. Membangun 300+ automated test cases dari nol mencakup API, web, dan mobile (iOS & Android). Menerapkan validasi multi-environment (Dev, QA, Staging, Production). Membangun pelaporan bug detail dengan anotasi scope region dan environment.",
+          "result": "Meningkatkan kepercayaan rilis di semua 3 region. Mengurangi upaya regresi manual secara signifikan. Meningkatkan konsistensi dan kualitas lintas region dan platform."
+        },
+        "bri": {
+          "title": "BRI Banking Suite — QA Multi-Proyek",
+          "problem": "Sistem perbankan kompleks dengan banyak modul (Ceria, Senyum, Sabrina Bot, Direct Debit, Fund Transfer, Briva) dan rilis yang sering membutuhkan quality assurance menyeluruh.",
+          "action": "Membuat dan memelihara script otomasi menggunakan Katalon Studio dan Selenium. Melakukan pengujian end-to-end, regresi, dan integrasi di semua modul. Berkoordinasi erat dengan developer dan BA untuk memastikan cakupan komprehensif.",
+          "result": "Mencapai sekitar 70% cakupan otomasi. Mengidentifikasi 50+ masalah kritis sebelum rilis. Mengurangi defect produksi dan meningkatkan stabilitas fitur di setiap rilis."
+        },
+        "qoin": {
+          "title": "Fintech E-Wallet — Kualitas Aplikasi Flutter",
+          "problem": "Fitur keuangan kritis di aplikasi e-wallet yang membutuhkan akurasi dan stabilitas tinggi. Bug di alur transaksi bisa berarti kerugian uang nyata bagi pengguna.",
+          "action": "Melakukan pengujian API dan mobile dengan fokus pada akurasi transaksi. Memvalidasi alur transaksi dan edge case di beberapa produk e-wallet. Membangun automation suite mencakup 150+ skenario menggunakan Selenium dan Katalon Studio.",
+          "result": "Berkontribusi pada pengurangan 30% defect pasca-rilis. Meningkatkan keandalan fitur transaksi. Mengurangi bug kritis yang mencapai produksi."
+        }
       }
   }
   
