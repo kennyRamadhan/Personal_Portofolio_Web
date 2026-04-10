@@ -78,14 +78,16 @@ export default function Hero() {
         transition={{ duration: 1.2, ease: "easeOut", delay: 0.8 }}
         className="relative"
       >
-        <div className="absolute inset-0 rounded-[1.25rem] bg-gradient-to-br from-primary/30 to-accent/30 blur-sm opacity-0 hover:opacity-100 transition-opacity duration-700"></div>
-        <img
-          src="/assets/images/profile.png"
-          alt="Profile"
-          loading="lazy"
-          decoding="async"
-          className="relative w-52 sm:w-64 md:w-96 max-w-full h-auto object-cover rounded-[1.25rem] transition-all duration-700 ease-in-out hover:scale-[1.02] shadow-lg"
-        />
+        <div className="relative w-52 sm:w-64 md:w-96 max-w-full max-h-[450px] overflow-hidden">
+          <img
+            src="/assets/images/update_profile.png"
+            alt="Kenny Ramadhan"
+            loading="lazy"
+            decoding="async"
+            className="w-full h-auto object-cover object-top"
+          />
+          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-gray-900 to-transparent" />
+        </div>
       </motion.div>
       </div>
     </section>
