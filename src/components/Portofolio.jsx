@@ -12,32 +12,32 @@ const META = {
     location: "jakarta",
   },
   "PT Ikonsultan Inovatama": {
-    date: "1y 5m",
+    date: "1 year 5 months",
     keywords: "Tier-1 Banking · Salesforce · Selenium",
     location: "jakarta",
   },
   "PT Moonlay Technology": {
-    date: "1y 4m",
+    date: "1 year 4 months",
     keywords: "SNAP API · Katalon · Groovy · Performance",
     location: "jakarta",
   },
   "PT Qoin Digital Indonesia": {
-    date: "1y 1m",
+    date: "1 year 1 month",
     keywords: "E-Wallet · Crypto Wallet · IAM · Katalon",
     location: "jakarta",
   },
   "PT Avows Technology": {
-    date: "7m",
+    date: "7 months",
     keywords: "Pawn-broking · Sharia Lending · Manual",
     location: "jakarta",
   },
   "PT Berca Hardaya Perkasa": {
-    date: "6m",
+    date: "6 months",
     keywords: "Desktop support · Hardware · Networking",
     location: "jakarta",
   },
   "PT Whiteopen Teknologi": {
-    date: "1y",
+    date: "1 year",
     keywords: "Automotive enterprise QA · Go-Live PIC · 35+ modules",
     location: "jakarta",
   },
@@ -86,7 +86,7 @@ export default function Portfolio() {
             return (
               <div
                 key={idx}
-                className={`grid grid-cols-1 md:grid-cols-[130px_1fr_1fr_100px] gap-2 md:gap-4 py-3.5 md:items-baseline ${
+                className={`grid grid-cols-1 md:grid-cols-[160px_1fr_1fr_100px] gap-2 md:gap-4 py-3.5 md:items-baseline ${
                   isLast ? "" : "border-b border-stone-200"
                 }`}
               >

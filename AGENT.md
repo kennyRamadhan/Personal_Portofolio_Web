@@ -327,4 +327,4 @@ Do not introduce new colors, fonts, or section markers without updating `DESIGN_
 | `Header.jsx` | Locale `nav.*` for 4 items: featuredWork, skills, experience, contact. |
 | `Contact.jsx` | Locale `contacts.name`, `contacts.tagline`; resource/connect links hardcoded with hrefs. |
 | `Project.jsx` | NOT rendered. Reads `t("portfolio.projects", { returnObjects: true })` if reintroduced. |
-| `Blog.jsx`, `Tools.jsx`, `Testimonials.jsx`, `Language.jsx` | NOT rendered. Legacy code, gated off in `App.jsx`. |
+| `Blog.jsx`, `Testimonials.jsx`, `Language.jsx` | NOT rendered. Legacy code, gated off in `App.jsx`. |

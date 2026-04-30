@@ -5,7 +5,6 @@ const RESOURCE_LINKS = [
   { label: "Download CV", suffix: "↓", href: "/assets/docs/Kenny-Ramadhan-CV.pdf", download: "Kenny-Ramadhan-CV.pdf" },
   { label: "GitHub repos", suffix: "→", href: "https://github.com/kennyRamadhan", external: true },
   { label: "Blog", soon: true },
-  { label: "Test automation boilerplate", suffix: "→", href: "#", external: false },
 ];
 
 const CONNECT_LINKS = [
