@@ -1,3 +1,8 @@
+/**
+ * Project.jsx — Currently NOT rendered.
+ * Kept for potential future reintroduction.
+ * Last active: pre-design-v2 refactor (2026-04).
+ */
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";

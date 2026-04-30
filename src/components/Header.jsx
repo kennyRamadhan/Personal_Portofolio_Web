@@ -58,10 +58,6 @@ export default function Header() {
             <span className="text-[13px] font-medium text-stone-900">Kenny Ramadhan</span>
             <span className="font-mono text-[10px] text-stone-500">senior qa engineer</span>
           </div>
-          <span className="hidden md:inline-flex items-center gap-1.5 bg-success-subtle text-success px-2 py-0.5 rounded-full text-[11px] font-medium">
-            <span className="w-[5px] h-[5px] rounded-full bg-success" />
-            open to work
-          </span>
         </div>
 
         {/* ==== RIGHT — Nav + Lang ==== */}

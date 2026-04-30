@@ -1,11 +1,51 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+
+// Per-company display overrides (date range, keywords, location).
+// Keyed by company string in experience.json.
+const META = {
+  "Noovoleum": {
+    date: "2025 → present",
+    current: true,
+    keywords: "Multi-region SaaS · Playwright · Python",
+    location: "jakarta",
+  },
+  "PT Ikonsultan Inovatama": {
+    date: "2024 → 2025",
+    keywords: "Tier-1 Banking · Salesforce · Selenium",
+    location: "jakarta",
+  },
+  "PT Moonlay Technology": {
+    date: "2023 → 2024",
+    keywords: "SNAP API · Katalon · Groovy · Performance",
+    location: "jakarta",
+  },
+  "PT Qoin Digital Indonesia": {
+    date: "2022 → 2023",
+    keywords: "E-Wallet · Crypto Wallet · IAM · Katalon",
+    location: "jakarta",
+  },
+  "PT Avows Technology": {
+    date: "2021 → 2022",
+    keywords: "Pawn-broking · Sharia Lending · Manual",
+    location: "jakarta",
+  },
+  "PT Berca Hardaya Perkasa": {
+    date: "2021",
+    keywords: "Desktop support · Hardware · Networking",
+    location: "jakarta",
+  },
+  "PT Whiteopen Teknologi": {
+    date: "2020",
+    keywords: "Automotive · Quality Testing platform · Manual",
+    location: "jakarta",
+  },
+};
+
 export default function Portfolio() {
   const [experience, setExperience] = useState([]);
-  const { t, i18n } = useTranslation();
-  const isId = i18n.language === "id";
-
+  const { t } = useTranslation();
 
   useEffect(() => {
     fetch("/data/experience.json")
@@ -15,48 +55,59 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <motion.section
+    <section
       id="experience"
-      className="py-16 sm:py-20 lg:py-24 bg-white text-stone-900 animate-fadeInUp"
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      className="bg-white text-stone-900 py-16"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Experience */}
-      <h2 className="text-2xl sm:text-3xl font-medium tracking-tight mb-8 sm:mb-12 text-stone-900"> {t("experience.name")}</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        {experience.map((exp, idx) => (
-          <motion.div
-            key={idx}
-            className="p-4 rounded-xl bg-white border border-stone-200 transition-colors duration-200 h-full flex flex-col"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: idx * 0.1 }}
-          >
-            <h3 className="font-medium text-stone-900">{exp.company}</h3>
-            <p className="text-sm text-stone-600">
-              {exp.role} | {exp.period}
-            </p>
-            {(() => {
-              const bullets = isId && exp.descriptionId && exp.descriptionId.length > 0
-                ? exp.descriptionId
-                : exp.description;
-              return bullets && bullets.length > 0 ? (
-                <ul className="mt-3 space-y-1 list-disc list-inside">
-                  {bullets.map((desc, i) => (
-                    <li key={i} className="text-sm text-stone-700 leading-relaxed">
-                      {desc}
-                    </li>
-                  ))}
-                </ul>
-              ) : null;
-            })()}
-          </motion.div>
-        ))}
+      <div className="max-w-container mx-auto px-4 md:px-8">
+        <p className="font-mono text-[11px] text-stone-500 mb-2 tracking-wide">
+          {"// experience"}
+        </p>
+        <h2 className="text-[28px] font-medium tracking-tight text-stone-900 mb-3">
+          {t("experience.name", "Where I've worked.")}
+        </h2>
+        <p className="text-[14px] text-stone-600 max-w-2xl leading-relaxed mb-8">
+          Seven QA engagements across regulated finance, capital markets, and SaaS.
+        </p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.5 }}
+          className="bg-white border border-stone-200 rounded-lg py-2 px-4 md:px-7"
+        >
+          {experience.map((exp, idx) => {
+            const meta = META[exp.company] || {};
+            const isLast = idx === experience.length - 1;
+            const dateClasses = meta.current
+              ? "text-brand font-medium"
+              : "text-stone-500";
+            return (
+              <div
+                key={idx}
+                className={`grid grid-cols-1 md:grid-cols-[130px_1fr_1fr_100px] gap-2 md:gap-4 py-3.5 md:items-baseline ${
+                  isLast ? "" : "border-b border-stone-200"
+                }`}
+              >
+                <div className={`font-mono text-[11px] ${dateClasses}`}>
+                  {meta.date || exp.period}
+                </div>
+                <div>
+                  <p className="text-[13px] font-medium text-stone-900">{exp.role}</p>
+                  <p className="text-[12px] text-stone-600 mt-0.5">{exp.company}</p>
+                </div>
+                <div className="text-[11px] text-stone-500 leading-snug">
+                  {meta.keywords || ""}
+                </div>
+                <div className="font-mono text-[11px] text-stone-500 md:text-right">
+                  {meta.location || ""}
+                </div>
+              </div>
+            );
+          })}
+        </motion.div>
       </div>
-      </div>
-    </motion.section>
+    </section>
   );
 }

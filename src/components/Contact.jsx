@@ -47,10 +47,6 @@ export default function Contact() {
               Senior QA Engineer with 5+ years across Tier-1 Indonesian banks, fintech, and capital markets.
             </p>
             <p className="font-mono text-[11px] text-stone-500">jakarta · idn · utc+7</p>
-            <span className="inline-flex items-center gap-1.5 bg-success-subtle text-success px-2 py-0.5 rounded-full text-[11px] font-medium w-fit">
-              <span className="w-[5px] h-[5px] rounded-full bg-success" />
-              open to work
-            </span>
           </div>
 
           {/* Col 2 — Resources */}
