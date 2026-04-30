@@ -409,14 +409,40 @@ Keep existing patterns minimal. Use only for:
 
 ---
 
-## 10. Dark mode (DEFER to commit 4)
+## 10. Dark mode (LIVE — Commit 5)
 
-Light mode is locked first. Dark mode is a separate iteration:
-- `dark:` prefix usage on all components
-- Toggle component (sun/moon icon in nav)
-- Color tokens have dark-mode equivalents (TBD when implementing)
+Implementation: Tailwind `dark:` variants (Tailwind config has `darkMode: "class"`).
+Toggle: Sun/Moon icon in the nav header next to the en/id lang toggle.
+Default: respects `prefers-color-scheme`; user choice persists via `localStorage('theme')`.
+Body has a 200ms `background-color` + `color` transition for smoother mode switching.
 
-**For now**: do NOT add `dark:` classes during commits 1-3. Add `darkMode: "class"` flag in Tailwind config (already there), but no dark variants yet.
+### Dark color tokens
+
+| Element | Light value | Dark value |
+|---------|-------------|------------|
+| Page bg | `#FFFFFF` (`bg-white`) | `#0A0A0A` (`dark:bg-stone-950`) |
+| Subtle bg (footer, hero indicator) | `#FAFAF9` (`bg-stone-50`) | `#171717` (`dark:bg-stone-900`) |
+| Card bg (Stats, CaseStudy, Experience, Skills) | `#FFFFFF` (`bg-white`) | `#171717` (`dark:bg-stone-900`) |
+| Result highlight (CaseStudy right card) | `#FAFAF9` (`bg-stone-50`) | `#262626` (`dark:bg-stone-800`) |
+| Border | `border-stone-200` | `dark:border-stone-800` |
+| CaseStudy left stripe | `border-l-brand` | `dark:border-l-indigo-400` |
+| Text primary | `text-stone-900` | `dark:text-stone-50` |
+| Text secondary | `text-stone-600` | `dark:text-stone-400` |
+| Text tertiary (mono labels) | `text-stone-500` | `dark:text-stone-400` |
+| Brand text accent (// markers, indigo accents) | `text-brand` | `dark:text-indigo-400` |
+| Accent amber (P/A labels) | `text-accent` | `dark:text-amber-400` |
+
+### Things that DO NOT change in dark mode
+
+- KR monogram (`bg-brand text-white`) — brand identity stays the same
+- Filled tag chips and primary buttons (`bg-brand text-white`) — self-contained contrast
+- The Hero indicator grid pattern uses inline-style backgrounds; opacity bumps from 8% (`rgba(67,56,202,0.08)`) to 15% (`rgba(129,140,248,0.15)`) in dark for visibility. The component selects light vs dark style via a `theme` prop from `App.jsx`.
+
+### Adjusted in dark mode
+
+- Outline button (Download CV): light = `bg-white text-stone-900 border-stone-200`; dark = `bg-transparent text-stone-50 border-stone-700` (transparent, since the parent already has a dark surface)
+- Outline tag chip (supporting tags in CaseStudy): light = `bg-white text-stone-600 border-stone-200`; dark = `bg-stone-900 text-stone-400 border-stone-700`
+- Sticky nav backdrop: `bg-white/90` → `dark:bg-stone-950/90`
 
 ---
 

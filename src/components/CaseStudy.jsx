@@ -2,8 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-// Per-case meta: header (case number, company·dates), tags ordered with primary first.
-// Locale provides title/problem/action/result via t(`caseStudy.${key}.*`).
 const CASES = [
   {
     key: "uco",
@@ -47,16 +45,16 @@ export default function CaseStudy() {
   return (
     <section
       id="featured-work"
-      className="bg-white text-stone-900 pt-16 pb-8"
+      className="bg-white dark:bg-stone-950 text-stone-900 dark:text-stone-50 pt-16 pb-8"
     >
       <div className="max-w-container mx-auto px-4 md:px-8">
-        <p className="font-mono text-[11px] text-stone-500 mb-2 tracking-wide">
+        <p className="font-mono text-[11px] text-stone-500 dark:text-stone-400 mb-2 tracking-wide">
           {"// featured work"}
         </p>
-        <h2 className="text-[28px] font-medium tracking-tight text-stone-900 mb-3">
+        <h2 className="text-[28px] font-medium tracking-tight text-stone-900 dark:text-stone-50 mb-3">
           Selected case studies.
         </h2>
-        <p className="text-[14px] text-stone-600 max-w-2xl leading-relaxed mb-8">
+        <p className="text-[14px] text-stone-600 dark:text-stone-400 max-w-2xl leading-relaxed mb-8">
           A focused selection of QA engagements across multi-region SaaS, Tier-1 banking,
           payment APIs, and fintech.
         </p>
@@ -72,20 +70,20 @@ export default function CaseStudy() {
             <motion.article
               key={cs.key}
               variants={cardVariants}
-              className="bg-white border border-stone-200 border-l-2 border-l-brand rounded-r-lg p-6"
+              className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 border-l-2 border-l-brand dark:border-l-indigo-400 rounded-r-lg p-6"
             >
               {/* Header row */}
               <div className="flex justify-between items-baseline mb-1 flex-wrap gap-2">
-                <span className="font-mono text-[10px] text-brand uppercase tracking-[0.5px]">
+                <span className="font-mono text-[10px] text-brand dark:text-indigo-400 uppercase tracking-[0.5px]">
                   {cs.caseNo}
                 </span>
-                <span className="font-mono text-[11px] text-stone-500">
+                <span className="font-mono text-[11px] text-stone-500 dark:text-stone-400">
                   {cs.meta}
                 </span>
               </div>
 
               {/* Title */}
-              <h3 className="text-[17px] font-medium text-stone-900 mt-1 mb-4">
+              <h3 className="text-[17px] font-medium text-stone-900 dark:text-stone-50 mt-1 mb-4">
                 {t(`caseStudy.${cs.key}.title`)}
               </h3>
 
@@ -94,43 +92,43 @@ export default function CaseStudy() {
                 {/* LEFT — Problem + Action */}
                 <div>
                   <div className="mb-3">
-                    <p className="font-mono text-[10px] text-accent uppercase tracking-[0.5px] mb-1">
+                    <p className="font-mono text-[10px] text-accent dark:text-amber-400 uppercase tracking-[0.5px] mb-1">
                       {t("caseStudy.problem")}
                     </p>
-                    <p className="text-[13px] text-stone-600 leading-snug">
+                    <p className="text-[13px] text-stone-600 dark:text-stone-400 leading-snug">
                       {t(`caseStudy.${cs.key}.problem`)}
                     </p>
                   </div>
                   <div>
-                    <p className="font-mono text-[10px] text-accent uppercase tracking-[0.5px] mb-1">
+                    <p className="font-mono text-[10px] text-accent dark:text-amber-400 uppercase tracking-[0.5px] mb-1">
                       {t("caseStudy.action")}
                     </p>
-                    <p className="text-[13px] text-stone-600 leading-snug">
+                    <p className="text-[13px] text-stone-600 dark:text-stone-400 leading-snug">
                       {t(`caseStudy.${cs.key}.action`)}
                     </p>
                   </div>
                 </div>
 
                 {/* RIGHT — Result highlight */}
-                <div className="bg-stone-50 border border-stone-200 rounded-md p-3.5 px-4 self-start">
-                  <p className="font-mono text-[10px] text-brand uppercase tracking-[0.5px] mb-1.5">
+                <div className="bg-stone-50 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 rounded-md p-3.5 px-4 self-start">
+                  <p className="font-mono text-[10px] text-brand dark:text-indigo-400 uppercase tracking-[0.5px] mb-1.5">
                     {t("caseStudy.result")}
                   </p>
-                  <p className="text-[13px] text-stone-900 font-medium leading-snug">
+                  <p className="text-[13px] text-stone-900 dark:text-stone-50 font-medium leading-snug">
                     {t(`caseStudy.${cs.key}.result`)}
                   </p>
                 </div>
               </div>
 
               {/* Tag chips */}
-              <div className="border-t border-stone-200 pt-3 flex gap-1.5 flex-wrap">
+              <div className="border-t border-stone-200 dark:border-stone-800 pt-3 flex gap-1.5 flex-wrap">
                 {cs.tags.map((tag, i) => (
                   <span
                     key={tag}
                     className={
                       i < 2
                         ? "bg-brand text-white px-2.5 py-0.5 rounded-[3px] text-[10px] font-mono"
-                        : "bg-white text-stone-600 border border-stone-200 px-2.5 py-0.5 rounded-[3px] text-[10px] font-mono"
+                        : "bg-white dark:bg-stone-900 text-stone-600 dark:text-stone-400 border border-stone-200 dark:border-stone-700 px-2.5 py-0.5 rounded-[3px] text-[10px] font-mono"
                     }
                   >
                     {tag}

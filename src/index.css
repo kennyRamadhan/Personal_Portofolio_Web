@@ -14,6 +14,7 @@ body {
   font-family: 'Inter', system-ui, sans-serif;
   color: #1A1A1A;
   background: #FFFFFF;
+  transition: background-color 200ms ease, color 200ms ease;
 }
 
 /* Animasi sederhana */

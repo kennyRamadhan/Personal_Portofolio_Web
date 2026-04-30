@@ -13,7 +13,7 @@ export default function Stats() {
   return (
     <motion.section
       id="achievements"
-      className="bg-white text-stone-900"
+      className="bg-white dark:bg-stone-950 text-stone-900 dark:text-stone-50"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
@@ -24,15 +24,15 @@ export default function Stats() {
           {STATS.map((s) => (
             <div
               key={s.label}
-              className="bg-white border border-stone-200 rounded-lg p-5"
+              className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-lg p-5"
             >
-              <p className="font-mono text-[10px] text-stone-500 tracking-[0.3px] mb-2">
+              <p className="font-mono text-[10px] text-stone-500 dark:text-stone-400 tracking-[0.3px] mb-2">
                 {s.label}
               </p>
-              <p className="text-[30px] font-medium tracking-[-0.6px] text-stone-900 leading-none mb-2">
+              <p className="text-[30px] font-medium tracking-[-0.6px] text-stone-900 dark:text-stone-50 leading-none mb-2">
                 {s.value}
               </p>
-              <p className="text-[11px] text-stone-600 leading-snug">
+              <p className="text-[11px] text-stone-600 dark:text-stone-400 leading-snug">
                 {s.context}
               </p>
             </div>

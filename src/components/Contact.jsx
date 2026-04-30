@@ -20,53 +20,53 @@ export default function Contact() {
   return (
     <footer
       id="contact"
-      className="bg-stone-50 border-t border-stone-200 mt-16"
+      className="bg-stone-50 dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800 mt-16"
     >
       <div className="max-w-container mx-auto px-4 md:px-8 pt-14 pb-8">
         {/* Section heading */}
-        <p className="font-mono text-[11px] text-stone-500 mb-2 tracking-wide">{"// contact"}</p>
-        <h2 className="text-[28px] font-medium tracking-tight text-stone-900 mb-3">
+        <p className="font-mono text-[11px] text-stone-500 dark:text-stone-400 mb-2 tracking-wide">{"// contact"}</p>
+        <h2 className="text-[28px] font-medium tracking-tight text-stone-900 dark:text-stone-50 mb-3">
           {t("contacts.name", "Let's build better software together.")}
         </h2>
-        <p className="text-[15px] text-stone-600 max-w-xl leading-relaxed mb-12">
+        <p className="text-[15px] text-stone-600 dark:text-stone-400 max-w-xl leading-relaxed mb-12">
           {t("contacts.tagline")}
         </p>
 
         {/* 3-col grid */}
-        <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-8 pb-7 border-b border-stone-200">
+        <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-8 pb-7 border-b border-stone-200 dark:border-stone-800">
           {/* Col 1 — Brand */}
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-2.5">
               <span className="flex items-center justify-center w-6 h-6 rounded-md bg-brand text-white font-mono font-bold text-[10px] tracking-[-0.5px]">
                 KR
               </span>
-              <span className="text-[14px] font-medium text-stone-900">Kenny Ramadhan</span>
+              <span className="text-[14px] font-medium text-stone-900 dark:text-stone-50">Kenny Ramadhan</span>
             </div>
-            <p className="text-[12px] text-stone-600 leading-relaxed max-w-[280px]">
+            <p className="text-[12px] text-stone-600 dark:text-stone-400 leading-relaxed max-w-[280px]">
               Senior QA Engineer with 5+ years across Tier-1 Indonesian banks, fintech, and capital markets.
             </p>
-            <p className="font-mono text-[11px] text-stone-500">jakarta · idn · utc+7</p>
+            <p className="font-mono text-[11px] text-stone-500 dark:text-stone-400">jakarta · idn · utc+7</p>
           </div>
 
           {/* Col 2 — Resources */}
           <div>
-            <p className="font-mono text-[10px] text-stone-500 uppercase tracking-wider mb-4">
+            <p className="font-mono text-[10px] text-stone-500 dark:text-stone-400 uppercase tracking-wider mb-4">
               RESOURCES
             </p>
             <ul className="flex flex-col gap-2.5">
               {RESOURCE_LINKS.map((link) => (
                 <li key={link.label}>
                   {link.soon ? (
-                    <span className="text-[13px] text-stone-900">
+                    <span className="text-[13px] text-stone-900 dark:text-stone-50">
                       {link.label}{" "}
-                      <span className="font-mono text-[10px] text-stone-500">(soon)</span>
+                      <span className="font-mono text-[10px] text-stone-500 dark:text-stone-400">(soon)</span>
                     </span>
                   ) : (
                     <a
                       href={link.href}
                       {...(link.download ? { download: link.download } : {})}
                       {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                      className="text-[13px] text-stone-900 hover:text-brand transition-colors"
+                      className="text-[13px] text-stone-900 dark:text-stone-50 hover:text-brand dark:hover:text-indigo-400 transition-colors"
                     >
                       {link.label} {link.suffix}
                     </a>
@@ -78,7 +78,7 @@ export default function Contact() {
 
           {/* Col 3 — Connect */}
           <div>
-            <p className="font-mono text-[10px] text-stone-500 uppercase tracking-wider mb-4">
+            <p className="font-mono text-[10px] text-stone-500 dark:text-stone-400 uppercase tracking-wider mb-4">
               CONNECT
             </p>
             <ul className="flex flex-col gap-2.5">
@@ -87,7 +87,7 @@ export default function Contact() {
                   <a
                     href={link.href}
                     {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                    className="text-[13px] text-stone-900 hover:text-brand transition-colors"
+                    className="text-[13px] text-stone-900 dark:text-stone-50 hover:text-brand dark:hover:text-indigo-400 transition-colors"
                   >
                     {link.label} →
                   </a>
@@ -98,7 +98,7 @@ export default function Contact() {
         </div>
 
         {/* Bottom row */}
-        <div className="pt-4 flex flex-col sm:flex-row sm:justify-between gap-1 font-mono text-[11px] text-stone-500">
+        <div className="pt-4 flex flex-col sm:flex-row sm:justify-between gap-1 font-mono text-[11px] text-stone-500 dark:text-stone-400">
           <span>© 2026 kenny ramadhan</span>
           <span>kennyramadhan.com</span>
         </div>

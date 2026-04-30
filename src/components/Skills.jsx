@@ -35,16 +35,16 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="bg-white text-stone-900 py-16"
+      className="bg-white dark:bg-stone-950 text-stone-900 dark:text-stone-50 py-16"
     >
       <div className="max-w-container mx-auto px-4 md:px-8">
-        <p className="font-mono text-[11px] text-stone-500 mb-2 tracking-wide">
+        <p className="font-mono text-[11px] text-stone-500 dark:text-stone-400 mb-2 tracking-wide">
           {"// skills matrix"}
         </p>
-        <h2 className="text-[28px] font-medium tracking-tight text-stone-900 mb-3">
+        <h2 className="text-[28px] font-medium tracking-tight text-stone-900 dark:text-stone-50 mb-3">
           Capabilities by category.
         </h2>
-        <p className="text-[14px] text-stone-600 max-w-2xl leading-relaxed mb-8">
+        <p className="text-[14px] text-stone-600 dark:text-stone-400 max-w-2xl leading-relaxed mb-8">
           Tools and frameworks I use day-to-day across automation, API, performance,
           CI/CD, and programming.
         </p>
@@ -54,7 +54,7 @@ export default function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.5 }}
-          className="bg-white border border-stone-200 rounded-lg py-1 px-4 md:px-7"
+          className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-lg py-1 px-4 md:px-7"
         >
           {MATRIX.map((row, idx) => {
             const isLast = idx === MATRIX.length - 1;
@@ -62,13 +62,13 @@ export default function Skills() {
               <div
                 key={row.category}
                 className={`grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-6 py-4 md:items-baseline ${
-                  isLast ? "" : "border-b border-stone-200"
+                  isLast ? "" : "border-b border-stone-200 dark:border-stone-800"
                 }`}
               >
-                <div className="font-mono text-[11px] text-stone-500 tracking-[0.3px]">
+                <div className="font-mono text-[11px] text-stone-500 dark:text-stone-400 tracking-[0.3px]">
                   {row.category}
                 </div>
-                <div className="text-[13px] text-stone-900 leading-relaxed">
+                <div className="text-[13px] text-stone-900 dark:text-stone-50 leading-relaxed">
                   {row.items.join(", ")}
                 </div>
               </div>
