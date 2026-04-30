@@ -1,6 +1,3 @@
-This favicon was generated using the following font:
-
-- Font Title: Noto Sans Display
-- Font Author: undefined
-- Font Source: https://fonts.gstatic.com/s/notosansdisplay/v27/RLpbK4fy6r6tOBEJg0IAKzqdFZVZxpMkXJMhnB9XjO1o90LuV-PT4Doq_AKp_3cKVTGQ2iHrvWM.ttf
-- Font License: undefined)
+Favicon assets for kennyramadhan.com
+Design: KR monogram, JetBrains Mono Bold, Indigo #4338CA bg, White letterform
+Generated: 2026-04-30

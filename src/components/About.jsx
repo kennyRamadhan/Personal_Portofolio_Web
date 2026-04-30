@@ -37,6 +37,7 @@ export default function About() {
           <p className="text-base sm:text-lg text-gray-300">{t("about.paragraph3")}</p>
           <p className="text-base sm:text-lg text-gray-300">{t("about.paragraph4")}</p>
           <p className="text-base sm:text-lg text-gray-300">{t("about.paragraph5")}</p>
+          <p className="text-base sm:text-lg text-gray-300">{t("about.paragraphRegulatedDomains")}</p>
           <p className="text-base sm:text-lg text-white font-semibold">{t("about.paragraph6")}</p>
         </div>
       </motion.div>

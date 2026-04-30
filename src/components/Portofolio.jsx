@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 export default function Portfolio() {
   const [experience, setExperience] = useState([]);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isId = i18n.language === "id";
 
 
   useEffect(() => {
@@ -38,15 +39,20 @@ export default function Portfolio() {
             <p>
               {exp.role} | {exp.period}
             </p>
-            {exp.description && exp.description.length > 0 && (
-              <ul className="mt-3 space-y-1 list-disc list-inside">
-                {exp.description.map((desc, i) => (
-                  <li key={i} className="text-sm text-gray-300 leading-relaxed">
-                    {desc}
-                  </li>
-                ))}
-              </ul>
-            )}
+            {(() => {
+              const bullets = isId && exp.descriptionId && exp.descriptionId.length > 0
+                ? exp.descriptionId
+                : exp.description;
+              return bullets && bullets.length > 0 ? (
+                <ul className="mt-3 space-y-1 list-disc list-inside">
+                  {bullets.map((desc, i) => (
+                    <li key={i} className="text-sm text-gray-300 leading-relaxed">
+                      {desc}
+                    </li>
+                  ))}
+                </ul>
+              ) : null;
+            })()}
           </motion.div>
         ))}
       </div>

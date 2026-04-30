@@ -22,7 +22,7 @@
     },
     "hero": {
       "title": "Membangun Perangkat Lunak Andal dengan Mengurangi Bug Sebelum Mencapai Produksi",
-      "subtitle": "Senior QA Engineer dengan 5+ tahun pengalaman di automation (API, Web, Mobile), berfokus pada peningkatan kualitas rilis, percepatan siklus pengujian, dan meminimalkan defect di produksi.",
+      "subtitle": "Senior QA Engineer dengan pengalaman 5+ tahun lintas bank Tier-1 Indonesia, fintech, dan pasar modal. Spesialisasi di framework automation, pengujian API Bank Indonesia SNAP, dan quality engineering terintegrasi CI/CD.",
       "download": "Unduh CV",
       "viewWork": "Lihat Karya Saya"
     },
@@ -33,6 +33,7 @@
       "paragraph3": "Saat ini di Noovoleum, saya berperan sebagai satu-satunya QA engineer untuk UCO Collect, aplikasi multi-region yang melayani Indonesia, Thailand, dan Singapura. Saya mengelola seluruh siklus QA, membangun 300+ automated test cases dari nol untuk platform API, web, dan mobile.",
       "paragraph4": "Sepanjang karir saya, saya telah bekerja di lingkungan multi-produk dan sistem kompleks, di mana saya berkontribusi dalam mengurangi waktu regresi, meningkatkan kepercayaan rilis, dan meningkatkan kualitas produk secara keseluruhan. Saya memiliki pengalaman langsung dengan tools otomasi seperti Selenium, Cypress, Playwright, dan Katalon, serta performance testing menggunakan JMeter dan validasi API menggunakan Postman.",
       "paragraph5": "Di luar eksekusi, saya aktif berkontribusi dalam merancang strategi pengujian yang scalable, membimbing QA engineer junior, dan meningkatkan proses serta standar QA.",
+      "paragraphRegulatedDomains": "Pengalaman saya meliputi domain finansial yang teregulasi — perbankan Tier-1 Indonesia, e-wallet, multi-chain crypto wallet, pasar modal, dan micro-lending — di mana saya membangun automation API untuk sistem yang patuh Bank Indonesia SNAP dengan validasi tanda tangan kriptografi multi-lapis (RSA SHA-256, HMAC-SHA512), dan memimpin tim QA melalui siklus rilis berbasis MVP.",
       "paragraph6": "Tujuan saya bukan hanya menguji fitur, tetapi menghasilkan produk yang andal."
     },
     "portfolio": {
@@ -97,9 +98,9 @@
         "automation": "Otomasi",
         "apiTesting": "Pengujian API",
         "performanceTesting": "Pengujian Performa",
-        "ciCdAndTools": "CI/CD & Alat",
+        "ciCdAndReporting": "CI/CD & Pelaporan",
         "programming": "Pemrograman",
-        "documentationAndReporting": "Dokumentasi & Pelaporan",
+        "documentation": "Dokumentasi",
         "database": "Database"
       },
       "frameworks": {
@@ -134,16 +135,22 @@
           "action": "Merancang skenario pengujian terstruktur lintas region. Membangun 300+ automated test cases dari nol mencakup API, web, dan mobile (iOS & Android). Menerapkan validasi multi-environment (Dev, QA, Staging, Production). Membangun pelaporan bug detail dengan anotasi scope region dan environment.",
           "result": "Meningkatkan kepercayaan rilis di semua 3 region. Mengurangi upaya regresi manual secara signifikan. Meningkatkan konsistensi dan kualitas lintas region dan platform."
         },
-        "bri": {
-          "title": "BRI Banking Suite — QA Multi-Proyek",
-          "problem": "Sistem perbankan kompleks dengan banyak modul (Ceria, Senyum, Sabrina Bot, Direct Debit, Fund Transfer, Briva) dan rilis yang sering membutuhkan quality assurance menyeluruh.",
-          "action": "Membuat dan memelihara script otomasi menggunakan Katalon Studio dan Selenium. Melakukan pengujian end-to-end, regresi, dan integrasi di semua modul. Berkoordinasi erat dengan developer dan BA untuk memastikan cakupan komprehensif.",
-          "result": "Mencapai sekitar 70% cakupan otomasi. Mengidentifikasi 50+ masalah kritis sebelum rilis. Mengurangi defect produksi dan meningkatkan stabilitas fitur di setiap rilis."
+        "tier1Bank": {
+          "title": "Bank Tier-1 Indonesia — QA Platform Banking Multi-Modul",
+          "problem": "Sistem perbankan kompleks yang mencakup modul kredit, tabungan, pembayaran, dan transfer dengan rilis yang sering, membutuhkan cakupan QA yang menyeluruh.",
+          "action": "Membuat dan memelihara skrip automation menggunakan Katalon Studio dan Selenium. Menjalankan testing end-to-end, regression, dan integration di seluruh modul. Berkoordinasi erat dengan developer dan BA untuk memastikan cakupan yang komprehensif.",
+          "result": "Mencapai cakupan automation sekitar 70%. Mengidentifikasi 50+ critical issue sebelum rilis. Mengurangi defect produksi dan meningkatkan stabilitas fitur lintas rilis."
+        },
+        "snap": {
+          "title": "API Bank Indonesia SNAP — Automation Signature Kriptografi",
+          "problem": "Bank Indonesia SNAP (Standar Nasional Open API Pembayaran) membutuhkan signing kriptografi multi-lapis untuk setiap transaksi — RSA SHA-256 untuk autentikasi token, SHA-256 body hashing, dan HMAC-SHA512 transaction signing — membuat pengujian API manual menjadi lambat dan rentan error.",
+          "action": "Merekayasa utility signature multi-lapis yang dapat digunakan kembali dalam Groovy sebagai keyword Katalon Studio, dikonversi dari implementasi referensi JavaScript. Mendesain test suite data-driven yang mencakup 20+ skenario per endpoint di HTTP status code 200, 400, 401, 403, 404, 409, 500, dan 504, dengan binding skenario berbasis Excel.",
+          "result": "Mengotomatisasi API pembayaran SNAP-compliant (Balance Inquiry, SKNBI Transfer, RTGS Transfer, Direct Debit). Mengurangi waktu siklus regresi API secara signifikan dan menyediakan keyword signing yang dapat digunakan kembali di seluruh tim."
         },
         "qoin": {
           "title": "Fintech E-Wallet — Kualitas Aplikasi Flutter",
           "problem": "Fitur keuangan kritis di aplikasi e-wallet yang membutuhkan akurasi dan stabilitas tinggi. Bug di alur transaksi bisa berarti kerugian uang nyata bagi pengguna.",
-          "action": "Melakukan pengujian API dan mobile dengan fokus pada akurasi transaksi. Memvalidasi alur transaksi dan edge case di beberapa produk e-wallet. Membangun automation suite mencakup 150+ skenario menggunakan Selenium dan Katalon Studio.",
+          "action": "Melakukan pengujian API dan mobile dengan fokus pada akurasi transaksi. Memvalidasi alur transaksi dan edge case di beberapa produk e-wallet. Membangun automation suite mencakup 150+ skenario menggunakan Selenium dan Katalon Studio. Mengoordinasikan mass simulation testing dalam 4 sesi dengan 15–20 tester konkuren untuk memvalidasi konkurensi dan stabilitas saat beban tinggi.",
           "result": "Berkontribusi pada pengurangan 30% defect pasca-rilis. Meningkatkan keandalan fitur transaksi. Mengurangi bug kritis yang mencapai produksi."
         }
       }

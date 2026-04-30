@@ -29,8 +29,8 @@ const contactItems = [
   },
   {
     icon: Globe,
-    label: "kenny-portofolio-web.vercel.app",
-    href: "https://kenny-portofolio-web.vercel.app",
+    label: "kennyramadhan.com",
+    href: "https://kennyramadhan.com",
     external: true,
   },
   {

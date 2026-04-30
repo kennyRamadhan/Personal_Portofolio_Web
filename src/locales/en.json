@@ -22,7 +22,7 @@
     },
     "hero": {
       "title": "Building Reliable Software by Reducing Bugs Before They Reach Production",
-      "subtitle": "Senior QA Engineer with 5+ years of experience in automation (API, Web, Mobile), focused on improving release quality, accelerating testing cycles, and minimizing production defects.",
+      "subtitle": "Senior QA Engineer with 5+ years across Tier-1 Indonesian banks, fintech, and capital markets. Specialized in automation frameworks, Bank Indonesia SNAP API testing, and CI/CD-integrated quality engineering.",
       "download": "Download CV",
       "viewWork": "View My Work"
     },
@@ -33,6 +33,7 @@
       "paragraph3": "Currently at Noovoleum, I serve as the sole QA engineer for UCO Collect, a multi-region application serving Indonesia, Thailand, and Singapore. I own the entire QA lifecycle, building 300+ automated test cases from scratch across API, web, and mobile platforms.",
       "paragraph4": "Throughout my career, I have worked on multi-product environments and complex systems, where I contributed to reducing regression time, improving release confidence, and increasing overall product quality. I have hands-on experience with automation tools such as Selenium, Cypress, Playwright, and Katalon, along with performance testing using JMeter and API validation using Postman.",
       "paragraph5": "Beyond execution, I actively contribute to designing scalable test strategies, mentoring junior QA engineers, and improving QA processes and standards.",
+      "paragraphRegulatedDomains": "My experience spans regulated financial domains — Tier-1 Indonesian banking, e-wallet, multi-chain crypto wallet, capital markets, and micro-lending — where I've built API automation for Bank Indonesia SNAP-compliant systems with multi-layer cryptographic signature validation (RSA SHA-256, HMAC-SHA512), and led QA teams through MVP-based release cycles.",
       "paragraph6": "I aim to deliver not just tested features, but reliable products."
     },
     "portfolio": {
@@ -97,9 +98,9 @@
         "automation": "Automation",
         "apiTesting": "API Testing",
         "performanceTesting": "Performance Testing",
-        "ciCdAndTools": "CI/CD & Tools",
+        "ciCdAndReporting": "CI/CD & Reporting",
         "programming": "Programming",
-        "documentationAndReporting": "Documentation & Reporting",
+        "documentation": "Documentation",
         "database": "Database"
       },
       "frameworks": {
@@ -134,16 +135,22 @@
           "action": "Designed structured test scenarios across regions. Built 300+ automated test cases from scratch spanning API, web, and mobile (iOS & Android). Implemented multi-environment validation (Dev, QA, Staging, Production). Established detailed bug reporting with region and environment scope annotations.",
           "result": "Increased release confidence across all 3 regions. Reduced manual regression effort significantly. Improved consistency and quality across regions and platforms."
         },
-        "bri": {
-          "title": "BRI Banking Suite — Multi-Project QA",
-          "problem": "Complex banking system with multiple modules (Ceria, Senyum, Sabrina Bot, Direct Debit, Fund Transfer, Briva) and frequent releases requiring thorough quality assurance.",
+        "tier1Bank": {
+          "title": "Tier-1 Indonesian Bank — Multi-Module Banking Platform QA",
+          "problem": "Complex banking system spanning credit, savings, payments, and transfer modules with frequent releases requiring thorough QA coverage.",
           "action": "Created and maintained automation scripts using Katalon Studio and Selenium. Performed end-to-end, regression, and integration testing across all modules. Coordinated closely with developers and BA to ensure comprehensive coverage.",
           "result": "Achieved approximately 70% automation coverage. Identified 50+ critical issues before release. Reduced production defects and improved feature stability across releases."
+        },
+        "snap": {
+          "title": "Bank Indonesia SNAP API — Cryptographic Signature Automation",
+          "problem": "Bank Indonesia SNAP (Standar Nasional Open API Pembayaran) requires multi-layer cryptographic signing for every transaction — RSA SHA-256 for token authentication, SHA-256 body hashing, and HMAC-SHA512 transaction signing — making manual API testing slow and error-prone.",
+          "action": "Engineered reusable multi-layer signature utilities in Groovy as Katalon Studio keywords, converted from reference JavaScript implementations. Designed data-driven test suites covering 20+ scenarios per endpoint across HTTP status codes 200, 400, 401, 403, 404, 409, 500, and 504, with Excel-based scenario binding.",
+          "result": "Automated SNAP-compliant payment APIs (Balance Inquiry, SKNBI Transfer, RTGS Transfer, Direct Debit). Reduced API regression cycle time substantially and provided reusable signing keywords adopted across the team."
         },
         "qoin": {
           "title": "Fintech E-Wallet — Flutter App Quality",
           "problem": "Critical financial features in e-wallet applications requiring high accuracy and stability. Bugs in transaction flows could mean real money loss for users.",
-          "action": "Conducted API and mobile testing with focus on transaction accuracy. Validated transaction flows and edge cases across multiple e-wallet products. Built automation suites covering 150+ test scenarios using Selenium and Katalon Studio.",
+          "action": "Conducted API and mobile testing with focus on transaction accuracy. Validated transaction flows and edge cases across multiple e-wallet products. Built automation suites covering 150+ test scenarios using Selenium and Katalon Studio. Coordinated mass simulation testing across 4 sessions with 15–20 concurrent testers to validate concurrency and stability under load.",
           "result": "Contributed to 30% reduction in post-release defects. Improved reliability of transaction features. Reduced critical bugs reaching production."
         }
       }

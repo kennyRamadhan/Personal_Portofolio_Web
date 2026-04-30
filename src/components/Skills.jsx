@@ -7,25 +7,26 @@ const categoryMap = {
     "Test Case", "Test Plan", "Requirement Analysis",
     "Functional Testing", "Regression Testing", "Exploratory Testing",
     "Bug Reporting", "Usability Testing", "Manual Testing",
-    "Integration Testing",
+    "Integration Testing", "Test-Driven Development (TDD)", "Risk-based Testing",
   ],
   "Automation": [
     "Selenium", "Cypress", "Playwright", "Katalon Studio",
     "Appium", "TestNG", "Rest Assured", "Robot Framework",
-    "Automation Testing", "Allure Report", "Extent Report",
+    "Automation Testing",
   ],
   "API Testing": [
     "Postman", "Newman", "API Testing", "Apidog",
   ],
   "Performance Testing": [
-    "JMeter", "K6", "Performance Testing",
+    "JMeter", "K6", "Performance Testing", "Artillery.io",
   ],
-  "CI/CD & Tools": [
+  "CI/CD & Reporting": [
     "Git", "GitHub", "Jenkins", "TestRail",
     "Agile & Scrum", "Version Control (Git)", "Azure DevOps", "GitHub Actions",
+    "Azure DevOps Pipelines", "ExtentReports", "Allure Reporting",
   ],
-  "Programming": ["Java", "Javascript", "Python"],
-  "Documentation & Reporting": ["Ms Office", "Google Docs", "Confluence", "Notion", "JIRA", "Azure DevOps"],
+  "Programming": ["Java", "JavaScript", "Python", "Groovy"],
+  "Documentation": ["Ms Office", "Google Docs", "Confluence", "Notion", "JIRA"],
   "Database": ["SQL", "MongoDB", "DBeaver", "PostgreSQL"],
 };
 
@@ -34,9 +35,9 @@ const categories = [
   { key: "automation", label: "Automation" },
   { key: "apiTesting", label: "API Testing" },
   { key: "performanceTesting", label: "Performance Testing" },
-  { key: "ciCdAndTools", label: "CI/CD & Tools" },
+  { key: "ciCdAndReporting", label: "CI/CD & Reporting" },
   { key: "programming", label: "Programming" },
-  { key: "documentationAndReporting", label: "Documentation & Reporting" },
+  { key: "documentation", label: "Documentation" },
   { key: "database", label: "Database" },
 ];
 

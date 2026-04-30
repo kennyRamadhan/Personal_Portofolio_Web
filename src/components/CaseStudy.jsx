@@ -8,8 +8,12 @@ const caseStudies = [
     tags: ["Mobile", "Web", "API", "Multi-Region"],
   },
   {
-    key: "bri",
+    key: "tier1Bank",
     tags: ["Flutter", "API", "Banking", "Automation"],
+  },
+  {
+    key: "snap",
+    tags: ["API", "Banking", "Cryptography", "Katalon"],
   },
   {
     key: "qoin",

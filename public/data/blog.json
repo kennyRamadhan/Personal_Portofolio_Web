@@ -9,20 +9,11 @@
     "url": "#"
   },
   {
-    "title": "Regression Testing Strategy for Multi-Region Applications",
-    "titleId": "Strategi Regression Testing untuk Aplikasi Multi-Region",
-    "summary": "Lessons learned from testing an application serving Indonesia, Thailand, and Singapore with different business rules per region.",
-    "summaryId": "Pelajaran dari menguji aplikasi yang melayani Indonesia, Thailand, dan Singapura dengan aturan bisnis berbeda per region.",
-    "tags": ["Regression", "Multi-Region", "Strategy"],
-    "date": "Coming Soon",
-    "url": "#"
-  },
-  {
-    "title": "From Manual QA to Automation: My 5-Year Journey",
-    "titleId": "Dari Manual QA ke Automation: Perjalanan 5 Tahun Saya",
-    "summary": "How I transitioned from a manual QA role to building automation frameworks from scratch at 4 different companies.",
-    "summaryId": "Bagaimana saya bertransisi dari QA manual ke membangun framework otomasi dari nol di 4 perusahaan berbeda.",
-    "tags": ["Career", "Automation", "Growth"],
+    "title": "Implementing Bank Indonesia SNAP API Test Automation: Multi-Layer Cryptographic Signatures in Groovy",
+    "titleId": "Implementasi SNAP API Bank Indonesia: Tanda Tangan Kriptografi Multi-Lapis di Groovy",
+    "summary": "How to build reusable Katalon Studio keywords in Groovy for RSA SHA-256 token authentication, SHA-256 body hashing, and HMAC-SHA512 transaction signing — covering 20+ scenarios per endpoint with data-driven testing.",
+    "summaryId": "Cara membangun keyword Katalon Studio reusable di Groovy untuk autentikasi token RSA SHA-256, body hashing SHA-256, dan transaction signing HMAC-SHA512 — mencakup 20+ skenario per endpoint dengan data-driven testing.",
+    "tags": ["API", "Banking", "Cryptography", "Groovy"],
     "date": "Coming Soon",
     "url": "#"
   }

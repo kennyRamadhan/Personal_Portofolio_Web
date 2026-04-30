@@ -1,73 +1,133 @@
 [
-    {
-      "company": "Noovoleum",
-      "role": "Senior QA Engineer",
-      "period": "Dec 2025 – Present",
-      "description": [
-        "Sole QA engineer owning the entire quality lifecycle for UCO Collect, a multi-region application (Indonesia, Thailand, Singapore)",
-        "Built 300+ automated test cases from scratch across API, web, and mobile (iOS & Android)",
-        "Designed structured test scenarios for region-specific business rules and payment validations",
-        "Reduced manual regression effort significantly through automation and improved test coverage",
-        "Collaborated directly with developers and stakeholders to triage defects and ensure release readiness"
-      ]
-    },
-    {
-      "company": "PT Ikonsultan Inovatama",
-      "role": "Lead QA Engineer",
-      "period": "Jul 2024 – Nov 2025",
-      "description": [
-        "Led QA efforts across multiple projects and modules for web and mobile platforms",
-        "Designed and executed test strategies, improving regression efficiency through automation",
-        "Mentored junior QA members and established standardized QA processes",
-        "Collaborated with PM, PO, and BA from early development to define acceptance criteria"
-      ]
-    },
-    {
-      "company": "PT Moonlay Technology",
-      "role": "QA Engineer",
-      "period": "Mar 2023 – Jun 2024",
-      "description": [
-        "Built and maintained automation frameworks using Katalon Studio and Selenium",
-        "Achieved approximately 70% automation coverage, reducing manual testing effort",
-        "Performed API, integration, and regression testing across 5+ concurrent projects",
-        "Identified 50+ critical issues before release across BRI banking products"
-      ]
-    },
-    {
-      "company": "PT Qoin Digital Indonesia",
-      "role": "QA Engineer",
-      "period": "Mar 2022 – Feb 2023",
-      "description": [
-        "Conducted end-to-end testing for e-wallet applications focusing on transaction accuracy",
-        "Built automation suites covering 150+ scenarios using Selenium and Katalon Studio",
-        "Performed API testing and validation across 20+ services using Postman and Newman"
-      ]
-    },
-    {
-      "company": "PT Avows Technology",
-      "role": "QA Engineer",
-      "period": "Jun 2021 – Feb 2022",
-      "description": [
-        "Executed functional and manual testing for Pegadaian gold products (web and mobile)",
-        "Created comprehensive test documentation and collaborated onsite with client team"
-      ]
-    },
-    {
-      "company": "PT Berca Hardaya Perkasa",
-      "role": "Desktpop Support Engineer",
-      "period": "Jan 2021 – Jun 2021",
-      "description": [
-        "Managed hardware installation and IT support, maintaining 95%+ first-call resolution rate"
-      ]
-    },
-    {
-      "company": "PT Whiteopen Teknologi",
-      "role": "QA Engineer Manual",
-      "period": "Jan 2020 – Des 2020",
-      "description": [
-        "Performed manual testing and bug reporting for AHM Sunter project (Astra Honda Motor)",
-        "Created test documentation and collaborated with 12-person cross-functional team"
-      ]
-    }
-  ]
-  
+  {
+    "company": "Noovoleum",
+    "role": "Senior QA Engineer",
+    "period": "Dec 2025 – Present",
+    "description": [
+      "Owned end-to-end QA lifecycle as sole QA engineer for UCO Collect — a multi-region application (Indonesia, Thailand, Singapore) covering Web Dashboard, Mobile (Android & iOS), and Backend API",
+      "Built automation suite from scratch using Playwright (Python, async, Page Object Model) with CI/CD integration on GitHub Actions and Allure reporting, scaling to 300+ test cases",
+      "Delivered partner integration automation for Alfagift and Pertamina Partner WebApp flows; authored full regression test plan covering positive, negative, and fresh-install scenarios across IDN/TH/SG regions",
+      "Applied Test-Driven Development (TDD) principles with developers; executed Load Testing with K6 and JMeter on critical API endpoints",
+      "Led API testing using Postman and Apidog with mock/Faker data and multi-environment validation; served as primary QA liaison between developers and stakeholders"
+    ],
+    "descriptionId": [
+      "Memegang seluruh lifecycle QA sebagai sole QA engineer untuk UCO Collect — aplikasi multi-region (Indonesia, Thailand, Singapura) yang mencakup Web Dashboard, Mobile (Android & iOS), dan Backend API",
+      "Membangun automation suite dari nol menggunakan Playwright (Python, async, Page Object Model) dengan integrasi CI/CD di GitHub Actions dan Allure reporting, mencapai 300+ test cases",
+      "Mengirimkan automation integrasi partner untuk flow Alfagift dan Pertamina Partner WebApp; menulis full regression test plan yang mencakup skenario positive, negative, dan fresh-install lintas region IDN/TH/SG",
+      "Menerapkan prinsip Test-Driven Development (TDD) bersama developer; menjalankan Load Testing dengan K6 dan JMeter pada endpoint API kritikal",
+      "Memimpin pengujian API menggunakan Postman dan Apidog dengan mock/Faker data dan validasi multi-environment; menjadi penghubung utama QA antara developer dan stakeholder"
+    ]
+  },
+  {
+    "company": "PT Ikonsultan Inovatama",
+    "role": "Lead QA Engineer",
+    "period": "Jul 2024 – Nov 2025",
+    "description": [
+      "Led QA as dedicated Lead QA Engineer for a Tier-1 Indonesian Bank's enterprise sales force automation platform — a Salesforce-based system serving relationship managers and personal bankers handling premier banking customers",
+      "Managed and mentored a team of 5 junior QA engineers within the same project, establishing structured QA standards, automation patterns, and bug-reporting rigor",
+      "Delivered QA across multiple MVP releases covering Customer 360, customer propensity modeling, contact directory, campaign management, user access management (UAM), notifications, and permission matrix modules",
+      "Built enterprise web automation framework using Selenium with Java and TestNG, integrated with Azure DevOps CI/CD pipelines and ExtentReports; extended coverage to mobile via Appium",
+      "Performed regression, sanity, and smoke testing with banking-grade SIT documentation; identified and prevented 2 Critical force-close bugs and a baseline data-sync production issue before go-live",
+      "Practiced Agile/Scrum with MVP-based release cadence across multi-sprint iterations, collaborating cross-functionally with the bank's internal QA team, Salesforce frontend, Backend Node.js, Backend Java, and analytics engineering teams"
+    ],
+    "descriptionId": [
+      "Memimpin QA sebagai Lead QA Engineer untuk platform enterprise sales force automation milik Bank Tier-1 Indonesia — sistem berbasis Salesforce yang melayani relationship manager dan personal banker untuk nasabah premier banking",
+      "Mengelola dan membimbing tim 5 junior QA engineer dalam project yang sama, menetapkan standar QA terstruktur, pattern automation, dan kedisiplinan bug-reporting",
+      "Mengirimkan QA lintas multiple MVP release yang mencakup modul Customer 360, customer propensity modeling, contact directory, campaign management, user access management (UAM), notification, dan permission matrix",
+      "Membangun framework web automation enterprise menggunakan Selenium dengan Java dan TestNG, terintegrasi dengan Azure DevOps CI/CD pipeline dan ExtentReports; memperluas cakupan ke mobile melalui Appium",
+      "Menjalankan regression, sanity, dan smoke testing dengan dokumentasi SIT berstandar perbankan; mengidentifikasi dan mencegah 2 bug Critical force-close dan satu issue produksi baseline data-sync sebelum go-live",
+      "Mempraktikkan Agile/Scrum dengan MVP-based release cadence lintas iterasi multi-sprint, berkolaborasi lintas fungsi dengan tim QA internal bank, Salesforce frontend, Backend Node.js, Backend Java, dan tim analytics engineering"
+    ]
+  },
+  {
+    "company": "PT Moonlay Technology",
+    "role": "QA Engineer",
+    "period": "Mar 2023 – Jun 2024",
+    "description": [
+      "Delivered QA for 6+ simultaneous enterprise projects across Tier-1 banking, capital markets, and distribution domains — including Bank Indonesia SNAP-compliant API integrations, mobile micro-lending platforms, banking AI virtual assistant validation, ERP order management, and capital market reporting systems",
+      "Engineered API automation for Bank Indonesia SNAP (Standar Nasional Open API Pembayaran)-compliant payment APIs covering Balance Inquiry, SKNBI Transfer, RTGS Transfer, and Direct Debit endpoints",
+      "Implemented reusable multi-layer signature utilities in Groovy (RSA SHA-256 for token authentication, SHA-256 body hashing, HMAC-SHA512 transaction signing) as Katalon Studio keywords, converted from reference JavaScript implementations",
+      "Designed data-driven test suites covering 20+ scenarios per endpoint across HTTP status codes 200, 400, 401, 403, 404, 409, 500, and 504, with Excel-based scenario binding",
+      "Built mobile automation suites for a consumer credit-limit product and an Ultra-Micro lending product using Katalon Studio + Appium, covering 65+ test scripts across Apply, Notification, Transaction History, and end-to-end flows",
+      "Executed Performance and Load Testing for an enterprise Order Management System using Artillery.io with 126 YAML scenarios targeting up to 1,200 concurrent users",
+      "Delivered web automation for a national capital market Centralized Trading Platform's reporting module under OJK compliance — covering Securities Mapping, Custodian Master, KSEI Settlement, and EBUS reporting flows",
+      "Increased automation coverage to ~70%; identified and prevented 50+ critical defects pre-release"
+    ],
+    "descriptionId": [
+      "Mengirimkan QA untuk 6+ project enterprise simultan lintas domain banking Tier-1, pasar modal, dan distribusi — termasuk integrasi API Bank Indonesia SNAP-compliant, platform mobile micro-lending, validasi banking AI virtual assistant, ERP order management, dan sistem pelaporan pasar modal",
+      "Merekayasa automation API untuk API pembayaran Bank Indonesia SNAP (Standar Nasional Open API Pembayaran)-compliant yang mencakup endpoint Balance Inquiry, SKNBI Transfer, RTGS Transfer, dan Direct Debit",
+      "Mengimplementasikan utility signature multi-lapis yang reusable dalam Groovy (RSA SHA-256 untuk autentikasi token, SHA-256 body hashing, HMAC-SHA512 transaction signing) sebagai keyword Katalon Studio, dikonversi dari implementasi referensi JavaScript",
+      "Mendesain test suite data-driven yang mencakup 20+ skenario per endpoint lintas HTTP status code 200, 400, 401, 403, 404, 409, 500, dan 504, dengan binding skenario berbasis Excel",
+      "Membangun mobile automation suite untuk produk consumer credit-limit dan produk Ultra-Micro lending menggunakan Katalon Studio + Appium, mencakup 65+ test script lintas flow Apply, Notification, Transaction History, dan end-to-end",
+      "Menjalankan Performance dan Load Testing untuk enterprise Order Management System menggunakan Artillery.io dengan 126 skenario YAML yang menargetkan hingga 1.200 concurrent user",
+      "Mengirimkan web automation untuk modul pelaporan Centralized Trading Platform pasar modal nasional di bawah kepatuhan OJK — mencakup flow Securities Mapping, Custodian Master, KSEI Settlement, dan pelaporan EBUS",
+      "Meningkatkan cakupan automation hingga ~70%; mengidentifikasi dan mencegah 50+ critical defect sebelum rilis"
+    ]
+  },
+  {
+    "company": "PT Qoin Digital Indonesia",
+    "role": "QA Engineer",
+    "period": "Feb 2022 – Mar 2023",
+    "description": [
+      "Delivered QA for Bank Indonesia-licensed e-Wallet and multi-chain crypto wallet products under BI's e-Wallet regulatory framework",
+      "Owned testing for the Access Manager module — a multi-tenant enterprise Identity & Access Management (IAM) system with 84 API endpoints across 9 functional domains: Authentication, User Management, Role & Permission (RBAC), Client Management, Profile, PIN/Password lifecycle, OTP & Verification, Device Management, and KYC Account Upgrade",
+      "Leveraged Katalon Studio for full-stack testing across Web (admin portal), Mobile (end-user app), and API layers within a single framework",
+      "Executed mass simulation testing for a multi-chain crypto wallet (Solana and Binance Smart Chain integrated) across 4 coordinated sessions with a team of 15–20 concurrent testers",
+      "Improved product reliability by reducing post-release defects by ~30%; enhanced bug tracking clarity and accelerated issue resolution across QA and development teams"
+    ],
+    "descriptionId": [
+      "Mengirimkan QA untuk produk e-Wallet berlisensi Bank Indonesia dan multi-chain crypto wallet di bawah kerangka regulasi e-Wallet BI",
+      "Memegang testing untuk modul Access Manager — sistem Identity & Access Management (IAM) enterprise multi-tenant dengan 84 endpoint API lintas 9 domain fungsional: Authentication, User Management, Role & Permission (RBAC), Client Management, Profile, PIN/Password lifecycle, OTP & Verification, Device Management, dan KYC Account Upgrade",
+      "Memanfaatkan Katalon Studio untuk full-stack testing lintas layer Web (admin portal), Mobile (end-user app), dan API dalam satu framework",
+      "Menjalankan mass simulation testing untuk multi-chain crypto wallet (terintegrasi Solana dan Binance Smart Chain) lintas 4 sesi terkoordinasi dengan tim 15–20 concurrent tester",
+      "Meningkatkan reliability produk dengan mengurangi defect post-release sebesar ~30%; meningkatkan kejelasan bug tracking dan mempercepat resolusi isu lintas tim QA dan development"
+    ]
+  },
+  {
+    "company": "PT Avows Technology",
+    "role": "QA Engineer",
+    "period": "Jul 2021 – Feb 2022",
+    "description": [
+      "Delivered QA for enhancement projects on a national pawn-broking lender's core lending platform — covering gold-savings products and Sharia-compliant lending products deployed across thousands of outlets nationwide",
+      "Conducted functional testing, parameter-driven business rule validation, and transaction journal verification to ensure financial accuracy and regulatory compliance with Bank Indonesia standards",
+      "Performed multi-channel integration testing across conventional, Sharia, mobile customer app, and Loan Origination System (LOS) platforms",
+      "Collaborated onsite with the client's internal teams (Business Analyst, Core Developer, Product Owner); authored test scenarios, test reports, and technical documentation"
+    ],
+    "descriptionId": [
+      "Mengirimkan QA untuk project enhancement pada platform core lending milik national pawn-broking lender — mencakup produk gold-savings dan produk Sharia-compliant lending yang ter-deploy di ribuan outlet di seluruh Indonesia",
+      "Menjalankan functional testing, validasi parameter-driven business rule, dan verifikasi transaction journal untuk memastikan akurasi finansial dan kepatuhan regulasi standar Bank Indonesia",
+      "Menjalankan multi-channel integration testing lintas platform konvensional, Sharia, mobile customer app, dan Loan Origination System (LOS)",
+      "Berkolaborasi onsite dengan tim internal klien (Business Analyst, Core Developer, Product Owner); menulis test scenario, test report, dan dokumentasi teknis"
+    ]
+  },
+  {
+    "company": "PT Berca Hardaya Perkasa",
+    "role": "Desktop Support Engineer",
+    "period": "Jan 2021 – Jun 2021",
+    "description": [
+      "Maintained 95%+ first-call resolution rate by diagnosing and resolving end-user technical issues efficiently",
+      "Supported IT infrastructure including hardware installation, networking, and system setup"
+    ],
+    "descriptionId": [
+      "Mempertahankan first-call resolution rate 95%+ dengan mendiagnosis dan menyelesaikan isu teknis end-user secara efisien",
+      "Mendukung infrastruktur IT termasuk instalasi hardware, networking, dan system setup"
+    ]
+  },
+  {
+    "company": "PT Whiteopen Teknologi",
+    "role": "QA Manual Engineer",
+    "period": "Jan 2020 – Dec 2020",
+    "description": [
+      "Delivered onsite manual QA for a national automotive manufacturer's enterprise Quality Testing platform (Phase 2) — covering 35+ application modules across Quality Measurement, Calibration, Laboratorium, and Part Approval Process (PAP)",
+      "Served as PIC (Person in Charge) for Go-Live readiness validation across three critical components: Role-User access matrix, Master Lookup (1,000+ reference queries), and Master Forms & Apps inventory; successfully went live in December 2020",
+      "Executed functional, workflow, and data integrity testing across multi-tier approval flows (Requestor → Coordinator → Dept Head), role-based authorization scenarios, and master data validation",
+      "Participated in SIT cycles covering functional defects, UI/UX enhancements, and business rule validation"
+    ],
+    "descriptionId": [
+      "Mengirimkan QA manual onsite untuk platform Quality Testing enterprise milik national automotive manufacturer (Phase 2) — mencakup 35+ modul aplikasi lintas Quality Measurement, Calibration, Laboratorium, dan Part Approval Process (PAP)",
+      "Menjabat sebagai PIC (Person in Charge) untuk validasi readiness Go-Live lintas tiga komponen kritikal: Role-User access matrix, Master Lookup (1.000+ reference query), dan Master Forms & Apps inventory; berhasil Go-Live pada Desember 2020",
+      "Menjalankan functional, workflow, dan data integrity testing lintas flow approval multi-tier (Requestor → Coordinator → Dept Head), skenario role-based authorization, dan validasi master data",
+      "Berpartisipasi dalam siklus SIT yang mencakup functional defect, enhancement UI/UX, dan validasi business rule"
+    ]
+  }
+]

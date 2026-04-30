@@ -1,164 +1,291 @@
-# Agent Instructions — Kenny Ramadhan Portfolio Website
+# AGENT.md — Kenny Ramadhan Portfolio
 
-## Project Identity
+> **For AI coding agents** (Claude Code, Cursor, Aider, Codex, Continue, etc.) and human contributors. This file follows the [agents.md](https://agents.md) convention.
 
-- **Project**: Personal portfolio website for Kenny Ramadhan (Senior QA Engineer)
-- **Purpose**: Showcase QA engineering skills, work experience, and portfolio projects to recruiters and hiring managers
-- **Live URL**: https://kenny-portofolio-web.vercel.app/
-- **Repository root**: `Personal_Portofolio_Web/`
+---
 
-## Tech Stack (exact versions from package.json)
+## 1. Project Identity
 
-| Tool             | Version   | Notes                          |
-|------------------|-----------|--------------------------------|
-| React            | ^19.1.1   | JSX (not TypeScript)           |
-| Vite             | ^7.1.7    | Build tool, ESM project        |
-| Tailwind CSS     | ^3.4.14   | Utility-first styling          |
-| Framer Motion    | ^12.23.22 | Animations and transitions     |
-| i18next          | ^25.6.0   | Internationalization framework |
-| react-i18next    | ^16.0.1   | React bindings for i18next     |
-| lucide-react     | ^0.545.0  | Icon library                   |
-| ESLint           | ^9.36.0   | Linting                        |
+| Attribute | Value |
+|---|---|
+| **Project** | Personal portfolio website for Kenny Ramadhan (Senior QA Engineer) |
+| **Purpose** | CV-replacement portfolio targeting recruiters in the QA / Test Automation industry |
+| **Live URL** | https://kenny-portofolio-web.vercel.app/ |
+| **Repository** | `kennyRamadhan/Personal_Portofolio_Web` |
+| **Hosting** | Vercel (auto-deploy from `main`) |
+| **Owner** | Kenny Ramadhan — Senior QA Engineer at Noovoleum (Dec 2025 – Present) |
 
-## CRITICAL RULES
+---
 
-1. **JavaScript only** — all components are `.jsx`. NEVER create `.tsx` or `.ts` files.
-2. **No new dependencies** without explicit approval from the user. Work within the existing stack.
-3. **Tailwind for layout and utilities** — the project uses Tailwind classes directly in JSX. Maintain this pattern.
-4. **i18next for all user-facing text** — translation files are in `src/locales/en.json` and `src/locales/id.json`. NEVER hardcode display text in components. Always use the `useTranslation` hook and add keys to both locale files.
-5. **Data lives in JSON** — content data (experience, skills, projects, etc.) is stored in `public/data/*.json`. NEVER hardcode data arrays inside components. Read from these JSON files.
-6. **Framer Motion for animations** — use `framer-motion` for any new animations. Do not add other animation libraries.
-7. **lucide-react for icons** — use `lucide-react` for any icons needed. Do not add other icon libraries.
-8. **Dark theme is the default** — the site uses a dark color scheme. Maintain dark backgrounds and light text. Do not introduce light theme unless explicitly asked.
+## 2. Tech Stack (locked — do NOT add libraries without approval)
 
-## Folder Structure
+| Tool | Version | Notes |
+|---|---|---|
+| React | ^19.1.1 | JSX only — never add TypeScript |
+| Vite | ^7.1.7 | ESM project, build tool |
+| Tailwind CSS | ^3.4.14 | Utility-first styling |
+| Framer Motion | ^12.23.22 | Animations & transitions |
+| i18next | ^25.6.0 | Internationalization framework |
+| react-i18next | ^16.0.1 | React bindings for i18next |
+| lucide-react | ^0.545.0 | Icon library |
+| ESLint | ^9.36.0 | Linting (flat config) |
+
+**Rule**: No new dependencies without explicit user approval. Work within this stack.
+
+---
+
+## 3. Setup & Commands
+
+```bash
+npm install         # Install dependencies
+npm run dev         # Vite dev server at http://localhost:5173
+npm run build       # Production build → dist/
+npm run preview     # Preview production build
+npm run lint        # ESLint
+```
+
+Node.js **18+** required (v20 / v22 recommended).
+
+---
+
+## 4. Critical Rules
+
+1. **JavaScript only** — all components are `.jsx`. Never create `.tsx`, `.ts`, or migrate to TypeScript.
+2. **No new npm dependencies** without explicit approval.
+3. **Tailwind utility classes inline** in JSX. Do not create per-component CSS files.
+4. **i18next for ALL user-facing UI labels** (headings, button text, navigation labels). Add keys to BOTH `en.json` AND `id.json` — never one without the other.
+5. **Bilingual content data** in `public/data/*.json` uses the `*Id` suffix pattern for Indonesian variants — e.g. `{ "title": "...", "titleId": "..." }` and `{ "summary": "...", "summaryId": "..." }`. This is separate from the i18next pattern; both coexist by design.
+6. **Framer Motion** for animations. Do not add other animation libraries.
+7. **lucide-react** for icons. Do not add other icon libraries.
+8. **Dark theme is the default and only theme.** Do not introduce a light-theme toggle unless explicitly asked.
+9. **Preserve CRLF line endings** in existing files. The repo uses Windows-style line endings (CRLF). Do not bulk-convert to LF.
+10. **Confidentiality / NDA awareness** — see Section 9 below. This is non-negotiable.
+
+---
+
+## 5. Folder Structure
 
 ```
 Personal_Portofolio_Web/
 ├── public/
 │   ├── assets/
 │   │   ├── docs/
-│   │   │   └── Kenny-Ramadhan-CV.pdf      # Downloadable CV
-│   │   └── images/
-│   │       ├── profile.JPG                 # Profile photo (JPG)
-│   │       └── profile.png                 # Profile photo (PNG)
-│   ├── data/
-│   │   ├── certification.json              # Certifications & training
-│   │   ├── experience.json                 # Work experience entries
-│   │   ├── programming.json                # Programming languages
-│   │   ├── projects.json                   # Portfolio projects
-│   │   ├── skills.json                     # Skills with proficiency levels
-│   │   └── tools.json                      # Frameworks & tools
-│   ├── favicon/                            # Favicon assets
-│   ├── react.svg
-│   └── vite.svg
+│   │   │   └── Kenny-Ramadhan-CV.pdf      # Downloadable CV (anonymized version)
+│   │   └── images/                        # Profile photos
+│   ├── data/                              # Content data (see Section 6)
+│   │   ├── blog.json                      # Insights / blog posts
+│   │   ├── certification.json             # Certifications & training
+│   │   ├── experience.json                # Work experience entries
+│   │   ├── programming.json               # Programming languages
+│   │   ├── projects.json                  # Portfolio project cards
+│   │   ├── skills.json                    # Skills with proficiency levels
+│   │   ├── testimonials.json              # Testimonials
+│   │   └── tools.json                     # Frameworks & tools
+│   └── favicon/
 ├── src/
-│   ├── components/
-│   │   ├── Contact.jsx                     # Contact section
-│   │   ├── Header.jsx                      # Navigation header
-│   │   ├── Hero.jsx                        # Hero/landing section
-│   │   ├── Language.jsx                    # Language toggle (EN/ID)
-│   │   ├── Portofolio.jsx                  # Portfolio/projects section
-│   │   ├── Project.jsx                     # Individual project card
-│   │   ├── Skills.jsx                      # Skills display section
-│   │   └── Tools.jsx                       # Frameworks/tools section
+│   ├── components/                        # All React components
+│   │   ├── About.jsx
+│   │   ├── Blog.jsx
+│   │   ├── CaseStudy.jsx                  # Featured Work case studies
+│   │   ├── Contact.jsx
+│   │   ├── Header.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Language.jsx                   # EN/ID toggle
+│   │   ├── Portofolio.jsx                 # NOTE: typo in filename is intentional — do not rename
+│   │   ├── Project.jsx
+│   │   ├── Skills.jsx
+│   │   ├── Stats.jsx
+│   │   ├── Testimonials.jsx
+│   │   └── Tools.jsx
 │   ├── locales/
-│   │   ├── en.json                         # English translations
-│   │   └── id.json                         # Indonesian translations
-│   ├── App.css                             # App-level styles
-│   ├── App.jsx                             # Root app component
-│   ├── i18n.js                             # i18next configuration
-│   ├── index.css                           # Global styles (Tailwind directives)
-│   ├── index.jsx                           # Entry point (unused or legacy)
-│   └── main.jsx                            # Vite entry point (ReactDOM.createRoot)
-├── index.html                              # HTML template
-├── tailwind.config.js                      # Tailwind configuration
-├── postcss.config.js                       # PostCSS config
-├── vite.config.js                          # Vite configuration
-├── eslint.config.js                        # ESLint flat config
-└── package.json
+│   │   ├── en.json                        # English translations
+│   │   └── id.json                        # Indonesian translations
+│   ├── App.css
+│   ├── App.jsx                            # Root component composition
+│   ├── i18n.js                            # i18next configuration
+│   ├── index.css                          # Tailwind directives + globals
+│   ├── index.jsx                          # ← ACTIVE entry point (referenced by index.html)
+│   └── main.jsx                           # ← UNUSED dead code; safe to delete
+├── index.html                             # `<script src="/src/index.jsx">`
+├── tailwind.config.js
+├── postcss.config.js
+├── vite.config.js
+├── eslint.config.js
+├── package.json
+├── README.md
+└── AGENT.md                              # ← you are here
 ```
 
-## Data Architecture
+### Notes on entry points
 
-All dynamic content is driven by JSON files in `public/data/`. When modifying or adding content:
+`index.html` contains `<script type="module" src="/src/index.jsx"></script>`, so **`src/index.jsx` is the active entry point**. The file `src/main.jsx` is leftover from the default Vite template and is not referenced anywhere — it is safe to delete on the next cleanup commit.
 
-- **`experience.json`** — work experience (company, role, dates). When editing, ensure Noovoleum is listed as the current employer (Dec 2025 – Present, Senior QA Engineer) and Ikonsultan ends Nov 2025.
-- **`skills.json`** — skills with proficiency levels (Advanced/Intermediate/Basic)
-- **`tools.json`** — frameworks and tools with proficiency levels
-- **`projects.json`** — portfolio items (title, description, link)
-- **`programming.json`** — programming languages
-- **`certification.json`** — certifications and training
+### Notes on `Portofolio.jsx`
 
-When adding new sections or content types, create a new JSON file in `public/data/` and fetch it in the component. Do not inline data.
+The filename uses the misspelling "Portofolio" (Indonesian-style). This is **intentional historical naming** — do not rename without explicit approval, as imports across the codebase reference this exact path.
 
-## i18n Pattern
+---
+
+## 6. Data Architecture (hybrid pattern)
+
+This project uses a **hybrid data pattern**:
+
+- **Content data** (text, descriptions, dates, levels, links) lives in `public/data/*.json` and is fetched at runtime by components.
+- **Structural categorization** (e.g. how skills are grouped into "Core QA Expertise", "Automation", "API Testing", etc. in `Skills.jsx`) is hardcoded in the component as a `categoryMap` object. This is acceptable — content stays in JSON, presentation structure stays in component.
+
+**When adding new content** (a new project, skill, experience entry):
+1. Add the data row to the relevant `public/data/*.json` file.
+2. Do not inline the data in a component.
+3. If a new content type is introduced, create a new `public/data/<name>.json` file and fetch it from the relevant component.
+
+**When adding a new section** (e.g. a new "Awards" or "Talks" section):
+1. Create the JSON data file in `public/data/`.
+2. Create a new component in `src/components/`.
+3. Wire it into `App.jsx`.
+4. Add corresponding i18n keys for any UI labels.
+
+---
+
+## 7. Internationalization (i18n)
+
+Two systems coexist — use the right one for the right job:
+
+### 7a. UI labels → i18next
+
+Use for **static UI strings** (section headings, button text, navigation labels).
 
 ```jsx
-// Correct pattern — always use this
 import { useTranslation } from "react-i18next";
 
 function MyComponent() {
   const { t } = useTranslation();
-  return <h2>{t("section.title")}</h2>;
+  return <h2>{t("about.heading")}</h2>;
 }
 ```
 
-- Config file: `src/i18n.js`
+- Config: `src/i18n.js`
 - Locale files: `src/locales/en.json`, `src/locales/id.json`
-- When adding any new user-facing string, add the key to BOTH `en.json` and `id.json`
-- Use nested keys for organization: `"hero.title"`, `"about.description"`, `"skills.heading"`
+- Use **nested keys**: `"hero.title"`, `"about.description"`, `"skills.heading"`
+- **Always add the key to both `en.json` and `id.json`** in the same commit.
 
-## Component Conventions
+### 7b. Content data → `*Id` suffix in JSON
 
-- **Functional components only** — no class components
-- **One component per file** in `src/components/`
-- **PascalCase** for component filenames: `Hero.jsx`, `Skills.jsx`
-- **Named or default exports** — follow the existing pattern in each file
-- Props should be destructured in the function signature
-- Use Framer Motion's `motion` components for scroll animations and transitions
+Use for **dynamic content rows** (blog posts, testimonials, work experience descriptions).
 
-## Styling Conventions
+```json
+{
+  "title": "How I Built 300+ Automated Tests",
+  "titleId": "Bagaimana Saya Membangun 300+ Test Otomatis",
+  "summary": "A practical guide on building...",
+  "summaryId": "Panduan praktis membangun..."
+}
+```
 
-- Primary approach: **Tailwind utility classes** directly in JSX
-- Supplementary: App.css and index.css for global styles and Tailwind directives
-- Dark theme colors: dark navy/slate backgrounds, light/white text, accent colors (purple/orange for highlights as seen in the current design)
-- The color palette visible on the site: dark backgrounds (~slate-900/950), purple/violet for section titles, orange/amber for item labels, teal/cyan gradient in the contact section
-- Responsive design: use Tailwind responsive prefixes (`sm:`, `md:`, `lg:`)
+- The component selects `field` or `fieldId` based on `i18n.language`.
+- Both fields must be filled when adding a new entry.
 
-## NPM Scripts
+---
 
-| Command          | Purpose                        |
-|------------------|--------------------------------|
-| `npm run dev`    | Start Vite dev server (HMR)   |
-| `npm run build`  | Production build               |
-| `npm run lint`   | Run ESLint                     |
-| `npm run preview`| Preview production build       |
+## 8. Component & Styling Conventions
 
-## Deployment
+### Components
+
+- **Functional components only** — no class components.
+- **One component per file** in `src/components/`.
+- **PascalCase** filenames: `Hero.jsx`, `Skills.jsx`.
+- Destructure props in the function signature.
+- Use `framer-motion`'s `motion` components for scroll/transition animations.
+
+### Styling
+
+- Primary approach: **Tailwind utility classes inline in JSX**.
+- Global styles only in `App.css` and `index.css` (Tailwind directives, font setup).
+- Dark theme palette:
+  - Background: dark navy / slate (`bg-bgDark` is defined in `tailwind.config.js`)
+  - Text: light/white
+  - Accent: purple/violet for section titles, orange/amber for item labels, teal/cyan gradient in contact section
+- Responsive: use Tailwind prefixes (`sm:`, `md:`, `lg:`).
+
+---
+
+## 9. Confidentiality & Anonymization Rules ⚠️
+
+The owner has worked with regulated clients (Tier-1 Indonesian banks, fintech, capital markets) under vendor NDAs. **All public-facing content must respect the following anonymization rules:**
+
+### 9a. Never publish publicly
+
+- Specific client / employer-of-employer names where work was done **as a vendor** (e.g. Maybank, BRI, Pegadaian, AHM, IDX/BEI).
+- Internal product / project names of those clients (e.g. SP7B DST, Sales4u, Ceria, Senyum, Sabrina, Briva, QTIDS, PASSION, CTP-PLTE).
+- Internal module / sprint / MVP naming conventions of those clients.
+- Specific internal architecture details (e.g. data model field names, internal API names not part of a public standard).
+
+### 9b. Safe to publish
+
+- Direct employer names (Noovoleum, PT Ikonsultan Inovatama, PT Moonlay Technology, PT Qoin Digital Indonesia, PT Avows Technology, PT Berca Hardaya Perkasa, PT Whiteopen Teknologi).
+- Public regulatory standards: Bank Indonesia SNAP (Standar Nasional Open API Pembayaran), OJK compliance, EBUS (Efek Berbasis Utang dan Sukuk), KSEI Settlement.
+- Public cryptography standards: RSA SHA-256, HMAC-SHA512, SHA-256 body hashing.
+- Public blockchain names: Solana, Binance Smart Chain.
+- Noovoleum's own products and partners (UCO Collect, Alfagift, Pertamina) — these are commercial partnerships of the current employer.
+- Quantified achievements (300+ test cases, 70% coverage, etc.).
+- Tooling and frameworks used.
+
+### 9c. Anonymization patterns to use
+
+| Sensitive | Replace with |
+|---|---|
+| `Maybank` (as client) | `Tier-1 Indonesian Bank` |
+| `BRI` (as client) | `Tier-1 Indonesian Bank` |
+| `Pegadaian` | `national pawn-broking lender` |
+| `AHM` / `Astra Honda Motor` | `national automotive manufacturer` |
+| `IDX` / `BEI` | `national capital market platform` |
+| Specific MVP / module names | Generic descriptions of capability |
+
+### 9d. The canonical CV is the source of truth
+
+When in doubt, **the file `public/assets/docs/Kenny-Ramadhan-CV.pdf` is the canonical anonymized version**. Website content (case studies, work experience descriptions, about section, hero copy) should match the level of disclosure in the CV. If the CV says "Tier-1 Indonesian Bank's enterprise sales force automation platform", the website should not say "Maybank SP7B DST".
+
+### 9e. When updating any of the above
+
+If a contributor (human or agent) finds existing content in the repo that violates these rules (legacy content from before this policy), **flag it and propose anonymization** rather than silently leaving it. As of the introduction of this AGENT.md, the repo may still contain legacy non-anonymized references that need cleanup.
+
+---
+
+## 10. Deployment
 
 - **Platform**: Vercel
-- **Method**: Auto-deploy from GitHub (push to main triggers deploy)
-- **Build command**: `vite build` (Vercel auto-detects)
+- **Method**: Auto-deploy on push to `main`
+- **Build command**: `vite build` (auto-detected by Vercel)
 - **Output directory**: `dist/`
-- No environment variables or server-side logic. This is a fully static site.
+- **No environment variables** — fully static site.
+- **No server-side logic** — no API routes, no SSR.
 
-## Important Context
+---
 
-- The website owner (Kenny Ramadhan) is a Senior QA Engineer at Noovoleum working on UCO Collect
-- Previous role: Lead QA Engineer at PT Ikonsultan Inovatama (Jul 2024 – Nov 2025)
-- The site targets recruiters and hiring managers in the QA/testing industry
-- The CV PDF in `public/assets/docs/` should be kept updated
-- The site currently has a typo in the folder name ("Portofolio" instead of "Portfolio") — this is intentional/existing naming, do not rename without approval
+## 11. What NOT to do
 
-## What NOT To Do
+- ❌ Do not install new npm packages without explicit approval.
+- ❌ Do not migrate any file to TypeScript.
+- ❌ Do not hardcode user-facing UI labels — always use i18next.
+- ❌ Do not inline content data — keep it in `public/data/*.json`.
+- ❌ Do not change the dark theme to light theme.
+- ❌ Do not modify Vercel deployment configuration.
+- ❌ Do not rename existing files or folders without approval (especially `Portofolio.jsx` typo).
+- ❌ Do not create per-component CSS files — use Tailwind classes inline.
+- ❌ Do not bulk-convert line endings from CRLF to LF.
+- ❌ Do not publish client names, internal product names, or NDA-protected information (see Section 9).
+- ❌ Do not use `localStorage`, `sessionStorage`, or any browser storage — site is fully stateless.
+- ❌ Do not assume `src/main.jsx` is the entry point — it is dead code. The active entry is `src/index.jsx`.
 
-- Do NOT install new npm packages without explicit user approval
-- Do NOT convert any file to TypeScript
-- Do NOT hardcode user-facing strings — always use i18next
-- Do NOT inline data that belongs in `public/data/*.json`
-- Do NOT change the dark theme to light theme
-- Do NOT modify the deployment configuration
-- Do NOT rename existing files or folders without approval (including the "Portofolio" naming)
-- Do NOT create separate CSS files per component — use Tailwind classes inline
-- Do NOT use `styled-components` library (it is not installed despite initial assumption — the project uses Tailwind)
+---
+
+## 12. Definition of Done (per change)
+
+A change is complete when:
+
+- [ ] Code compiles (`npm run build` passes).
+- [ ] Dev server runs without console errors (`npm run dev`).
+- [ ] ESLint passes (`npm run lint`).
+- [ ] Any new UI label has both `en.json` and `id.json` entries.
+- [ ] Any new content data row has both English and `*Id` Indonesian variants if applicable.
+- [ ] No client names, internal product names, or NDA-protected info introduced (Section 9).
+- [ ] Visually verified in dev server (dark theme, responsive at sm/md/lg breakpoints).
