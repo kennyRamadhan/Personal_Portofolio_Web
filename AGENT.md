@@ -288,4 +288,43 @@ A change is complete when:
 - [ ] Any new UI label has both `en.json` and `id.json` entries.
 - [ ] Any new content data row has both English and `*Id` Indonesian variants if applicable.
 - [ ] No client names, internal product names, or NDA-protected info introduced (Section 9).
-- [ ] Visually verified in dev server (dark theme, responsive at sm/md/lg breakpoints).
+- [ ] Visually verified in dev server (light theme, responsive at sm/md/lg breakpoints).
+
+---
+
+## 13. Design system v2 (current, locked 2026-04)
+
+The portfolio uses a minimalist design system documented in `DESIGN_SYSTEM.md` at the repo root. Refer to that file for all color, typography, spacing, and component specifications.
+
+Visual reference: `mockup-reference.html` at the repo root (open in browser to see exact target output). Note: mockup file documents the 4-card Stats and original Whiteopen wording; the CURRENT production state has 5 Stats cards and updated Whiteopen description per Commit 4 content updates. Do not regenerate `mockup-reference.html` to match — it remains a v1 visual snapshot reference.
+
+**Key tokens:**
+- Brand color: `#4338CA` (indigo), Tailwind class `brand`
+- Accent: `#F59E0B` (amber), use sparingly for emphasis only
+- Fonts: Inter (body), JetBrains Mono (labels, code-flavored)
+- Light mode default; dark mode toggle deferred to future commit
+
+**Stats and Skills components** use prescriptive English mono labels (e.g. `years_experience`, `web_mobile_automation`) as design tokens, not as translatable content. These labels are universal in design convention. Stats has 5 cards; Skills has 5 categories.
+
+**Personal photo and "open to work" status pill** are NOT used in the current design. Hiring availability is communicated only via the About paragraph and email/LinkedIn contact links in the footer.
+
+**Section "Portfolio"** (`Project.jsx`) is NOT rendered. The component file is preserved for potential future reintroduction. Locale keys `portfolio.projects.*` are also preserved.
+
+**Experience timeline** (`Portofolio.jsx`) uses mixed date format: current role shows `Mon YYYY → present` (e.g. `Dec 2025 → present`), past roles show tenure (`1y 5m`, `6m`, etc.). Current role tenure column uses `text-brand font-medium`; past roles use `text-stone-500`.
+
+Do not introduce new colors, fonts, or section markers without updating `DESIGN_SYSTEM.md` first.
+
+### Component data sources (post-v2)
+
+| Component | Data source |
+|---|---|
+| `Stats.jsx` | Hardcoded in component (5 cards). No JSON fetch. |
+| `Skills.jsx` | Hardcoded in component (5 categories). No JSON fetch. |
+| `CaseStudy.jsx` | Locale `caseStudy.*` (titles/problem/action/result); per-case meta (case number, employer label, tags) hardcoded in component. |
+| `Portofolio.jsx` | `public/data/experience.json` for company/role/period; per-company `META` map hardcoded in component for date format, keywords, location. |
+| `About.jsx` | Locale `about.heading`, `about.paragraph1`, `about.paragraph2`. |
+| `Hero.jsx` | Locale `hero.title`, `hero.subtitle`, `hero.viewWork`, `hero.download`. |
+| `Header.jsx` | Locale `nav.*` for 4 items: featuredWork, skills, experience, contact. |
+| `Contact.jsx` | Locale `contacts.name`, `contacts.tagline`; resource/connect links hardcoded with hrefs. |
+| `Project.jsx` | NOT rendered. Reads `t("portfolio.projects", { returnObjects: true })` if reintroduced. |
+| `Blog.jsx`, `Tools.jsx`, `Testimonials.jsx`, `Language.jsx` | NOT rendered. Legacy code, gated off in `App.jsx`. |

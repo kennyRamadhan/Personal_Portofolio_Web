@@ -28,13 +28,9 @@
     },
     "about": {
       "title": "Tentang",
-      "paragraph1": "Saya adalah Senior QA Engineer dengan lebih dari 5 tahun pengalaman di pengujian Web, API, dan Mobile, dengan spesialisasi di manual testing dan automation testing.",
-      "paragraph2": "Fokus utama saya bukan hanya menemukan bug, tetapi mencegahnya dengan meningkatkan strategi pengujian, menambah cakupan otomasi, dan memastikan kolaborasi yang lebih baik antara QA, developer, dan tim produk.",
-      "paragraph3": "Saat ini di Noovoleum, saya berperan sebagai satu-satunya QA engineer untuk UCO Collect, aplikasi multi-region yang melayani Indonesia, Thailand, dan Singapura. Saya mengelola seluruh siklus QA, membangun 300+ automated test cases dari nol untuk platform API, web, dan mobile.",
-      "paragraph4": "Sepanjang karir saya, saya telah bekerja di lingkungan multi-produk dan sistem kompleks, di mana saya berkontribusi dalam mengurangi waktu regresi, meningkatkan kepercayaan rilis, dan meningkatkan kualitas produk secara keseluruhan. Saya memiliki pengalaman langsung dengan tools otomasi seperti Selenium, Cypress, Playwright, dan Katalon, serta performance testing menggunakan JMeter dan validasi API menggunakan Postman.",
-      "paragraph5": "Di luar eksekusi, saya aktif berkontribusi dalam merancang strategi pengujian yang scalable, membimbing QA engineer junior, dan meningkatkan proses serta standar QA.",
-      "paragraphRegulatedDomains": "Pengalaman saya meliputi domain finansial yang teregulasi — perbankan Tier-1 Indonesia, e-wallet, multi-chain crypto wallet, pasar modal, dan micro-lending — di mana saya membangun automation API untuk sistem yang patuh Bank Indonesia SNAP dengan validasi tanda tangan kriptografi multi-lapis (RSA SHA-256, HMAC-SHA512), dan memimpin tim QA melalui siklus rilis berbasis MVP.",
-      "paragraph6": "Tujuan saya bukan hanya menguji fitur, tetapi menghasilkan produk yang andal."
+      "heading": "Pola pikir QA yang dibangun lintas industri terregulasi.",
+      "paragraph1": "Saya memulai karier QA pada 2020 sebagai QA Manual Engineer di proyek automotive enterprise, lalu pindah ke industri keuangan terregulasi — perbankan, fintech, capital markets, dan SaaS multi-region. Selama 6+ tahun, saya belajar bahwa kualitas yang baik bukan tentang menemukan bug, melainkan tentang membangun sistem dan disiplin yang membuat bug sulit muncul sejak awal.",
+      "paragraph2": "Saat ini saya berfokus pada perancangan framework automation, pengujian API dengan signature kriptografis untuk standar SNAP Bank Indonesia, dan integrasi CI/CD untuk environment terregulasi. Pengalaman lintas-domain ini melatih saya melihat QA sebagai disiplin engineering, bukan sekadar tugas checking."
     },
     "portfolio": {
       "title": "Portofolio",

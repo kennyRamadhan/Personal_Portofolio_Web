@@ -28,13 +28,9 @@
     },
     "about": {
       "title": "About",
-      "paragraph1": "I am a Senior QA Engineer with over 5 years of experience across Web, API, and Mobile testing, specializing in both manual and automation testing.",
-      "paragraph2": "My core focus is not just finding bugs, but preventing them by improving test strategy, increasing automation coverage, and ensuring better collaboration between QA, developers, and product teams.",
-      "paragraph3": "Currently at Noovoleum, I serve as the sole QA engineer for UCO Collect, a multi-region application serving Indonesia, Thailand, and Singapore. I own the entire QA lifecycle, building 300+ automated test cases from scratch across API, web, and mobile platforms.",
-      "paragraph4": "Throughout my career, I have worked on multi-product environments and complex systems, where I contributed to reducing regression time, improving release confidence, and increasing overall product quality. I have hands-on experience with automation tools such as Selenium, Cypress, Playwright, and Katalon, along with performance testing using JMeter and API validation using Postman.",
-      "paragraph5": "Beyond execution, I actively contribute to designing scalable test strategies, mentoring junior QA engineers, and improving QA processes and standards.",
-      "paragraphRegulatedDomains": "My experience spans regulated financial domains — Tier-1 Indonesian banking, e-wallet, multi-chain crypto wallet, capital markets, and micro-lending — where I've built API automation for Bank Indonesia SNAP-compliant systems with multi-layer cryptographic signature validation (RSA SHA-256, HMAC-SHA512), and led QA teams through MVP-based release cycles.",
-      "paragraph6": "I aim to deliver not just tested features, but reliable products."
+      "heading": "A QA mindset built across regulated industries.",
+      "paragraph1": "I started in QA in 2020 as a Manual QA Engineer on an automotive enterprise platform, then moved into regulated financial industries — banking, fintech, capital markets, and multi-region SaaS. Over 6+ years, I've learned that good quality isn't about finding bugs — it's about building systems and discipline that make bugs hard to surface in the first place.",
+      "paragraph2": "Today I specialize in automation framework design, API testing with cryptographic signatures for Bank Indonesia's SNAP standard, and CI/CD integration for regulated environments. The cross-domain experience trained me to see QA as an engineering discipline, not a checking task."
     },
     "portfolio": {
       "title": "Portfolio",

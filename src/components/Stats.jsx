@@ -2,10 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const STATS = [
-  { label: "years_experience",     value: "5+",   context: "across QA roles" },
-  { label: "tests_built",          value: "300+", context: "automated cases" },
-  { label: "automation_coverage",  value: "~70%", context: "across modules" },
-  { label: "products_tested",      value: "8+",   context: "enterprise systems" },
+  { label: "years_experience",  value: "6+",    context: "across QA roles" },
+  { label: "tests_authored",    value: "1200+", context: "manual + automated" },
+  { label: "frameworks_built",  value: "3+",    context: "Playwright, Selenium, Katalon" },
+  { label: "cicd_pipelines",    value: "3+",    context: "GitHub Actions, Azure DevOps, Allure" },
+  { label: "domains_tested",    value: "6+",    context: "banking, fintech, capital markets, +" },
 ];
 
 export default function Stats() {
@@ -19,7 +20,7 @@ export default function Stats() {
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-container mx-auto px-4 md:px-8 pb-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
           {STATS.map((s) => (
             <div
               key={s.label}

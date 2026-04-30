@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 // Five canonical mono-label categories per design v2 §6.7.
-// Items hand-curated from skills.json / programming.json — comma-separated render.
 const MATRIX = [
   {
     category: "web_mobile_automation",

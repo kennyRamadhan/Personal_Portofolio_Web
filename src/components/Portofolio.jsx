@@ -6,39 +6,39 @@ import { useTranslation } from "react-i18next";
 // Keyed by company string in experience.json.
 const META = {
   "Noovoleum": {
-    date: "2025 → present",
+    date: "Dec 2025 → present",
     current: true,
     keywords: "Multi-region SaaS · Playwright · Python",
     location: "jakarta",
   },
   "PT Ikonsultan Inovatama": {
-    date: "2024 → 2025",
+    date: "1y 5m",
     keywords: "Tier-1 Banking · Salesforce · Selenium",
     location: "jakarta",
   },
   "PT Moonlay Technology": {
-    date: "2023 → 2024",
+    date: "1y 4m",
     keywords: "SNAP API · Katalon · Groovy · Performance",
     location: "jakarta",
   },
   "PT Qoin Digital Indonesia": {
-    date: "2022 → 2023",
+    date: "1y 1m",
     keywords: "E-Wallet · Crypto Wallet · IAM · Katalon",
     location: "jakarta",
   },
   "PT Avows Technology": {
-    date: "2021 → 2022",
+    date: "7m",
     keywords: "Pawn-broking · Sharia Lending · Manual",
     location: "jakarta",
   },
   "PT Berca Hardaya Perkasa": {
-    date: "2021",
+    date: "6m",
     keywords: "Desktop support · Hardware · Networking",
     location: "jakarta",
   },
   "PT Whiteopen Teknologi": {
-    date: "2020",
-    keywords: "Automotive · Quality Testing platform · Manual",
+    date: "1y",
+    keywords: "Automotive enterprise QA · Go-Live PIC · 35+ modules",
     location: "jakarta",
   },
 };
