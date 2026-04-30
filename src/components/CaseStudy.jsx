@@ -37,13 +37,13 @@ export default function CaseStudy() {
   return (
     <motion.section
       id="featured-work"
-      className="py-16 sm:py-20 lg:py-24 bg-gray-900 text-gray-300"
+      className="py-16 sm:py-20 lg:py-24 bg-white text-stone-900"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-primary">
+      <h2 className="text-2xl sm:text-3xl font-medium tracking-tight mb-8 sm:mb-12 text-stone-900">
         {t("caseStudy.heading")}
       </h2>
 
@@ -57,10 +57,10 @@ export default function CaseStudy() {
         {caseStudies.map((cs) => (
           <motion.div
             key={cs.key}
-            className="p-6 sm:p-8 rounded-xl bg-slate-800/60 border border-slate-700"
+            className="p-6 sm:p-8 rounded-xl bg-white border border-stone-200"
             variants={cardVariants}
           >
-            <h3 className="text-xl font-bold text-white mb-3">
+            <h3 className="text-xl font-medium text-stone-900 mb-3">
               {t(`caseStudy.${cs.key}.title`)}
             </h3>
 
@@ -68,7 +68,7 @@ export default function CaseStudy() {
               {cs.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-purple-500/20 text-purple-300 rounded-full px-3 py-1 text-xs"
+                  className="bg-brand/10 text-brand rounded-full px-3 py-1 text-xs"
                 >
                   {tag}
                 </span>
@@ -77,28 +77,28 @@ export default function CaseStudy() {
 
             <div className="space-y-4">
               <div>
-                <p className="text-sm font-semibold text-purple-400 uppercase tracking-wide mb-1">
+                <p className="text-sm font-semibold text-brand uppercase tracking-wide mb-1">
                   {t("caseStudy.problem")}
                 </p>
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <p className="text-sm text-stone-700 leading-relaxed">
                   {t(`caseStudy.${cs.key}.problem`)}
                 </p>
               </div>
 
               <div>
-                <p className="text-sm font-semibold text-purple-400 uppercase tracking-wide mb-1">
+                <p className="text-sm font-semibold text-brand uppercase tracking-wide mb-1">
                   {t("caseStudy.action")}
                 </p>
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <p className="text-sm text-stone-700 leading-relaxed">
                   {t(`caseStudy.${cs.key}.action`)}
                 </p>
               </div>
 
-              <div className="border-l-2 border-purple-500/50 pl-4 bg-purple-500/5 rounded-r-lg py-2">
-                <p className="text-sm font-semibold text-purple-400 uppercase tracking-wide mb-1">
+              <div className="border-l-2 border-brand/50 pl-4 bg-brand/5 rounded-r-lg py-2">
+                <p className="text-sm font-semibold text-brand uppercase tracking-wide mb-1">
                   {t("caseStudy.result")}
                 </p>
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <p className="text-sm text-stone-700 leading-relaxed">
                   {t(`caseStudy.${cs.key}.result`)}
                 </p>
               </div>

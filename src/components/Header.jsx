@@ -4,25 +4,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 const NAV_ITEMS = [
-  { id: "hero", labelKey: "nav.home" },
-  { id: "about", labelKey: "nav.about" },
-  { id: "achievements", labelKey: "nav.achievements" },
+  { id: "featured-work", labelKey: "nav.featuredWork" },
   { id: "skills", labelKey: "nav.skills" },
   { id: "experience", labelKey: "nav.experience" },
-  { id: "featured-work", labelKey: "nav.featuredWork" },
-  { id: "portfolio", labelKey: "nav.portfolio" },
-  { id: "insights", labelKey: "nav.insights" },
   { id: "contact", labelKey: "nav.contact" },
 ];
-
-const DESKTOP_MAIN = ["hero", "about", "skills", "experience", "portfolio", "contact"];
-const DESKTOP_MORE = NAV_ITEMS.filter((n) => !DESKTOP_MAIN.includes(n.id));
 
 export default function Header() {
   const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  const [desktopOpen, setDesktopOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [activeId, setActiveId] = useState("hero");
 
   const scrollToSection = useCallback((id) => {
@@ -30,16 +20,9 @@ export default function Header() {
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   }, []);
 
-  // Scroll shadow
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   // Scroll spy
   useEffect(() => {
-    const ids = NAV_ITEMS.map((n) => n.id);
+    const ids = ["hero", ...NAV_ITEMS.map((n) => n.id)];
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -57,113 +40,81 @@ export default function Header() {
     return () => observer.disconnect();
   }, []);
 
-  // Close desktop dropdown on outside click
-  useEffect(() => {
-    if (!desktopOpen) return;
-    const handler = () => setDesktopOpen(false);
-    document.addEventListener("click", handler);
-    return () => document.removeEventListener("click", handler);
-  }, [desktopOpen]);
-
   const changeLanguage = (lng) => i18n.changeLanguage(lng);
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 px-4 py-3 md:px-8 md:py-4
-      bg-gradient-to-r from-primary to-secondary text-white
-      transition-all duration-500 ${
-        scrolled ? "shadow-lg" : ""
-      }`}
-    >
-      <nav className="flex items-center justify-between">
-        {/* ==== DESKTOP NAV (hidden on mobile) ==== */}
-        <div className="hidden md:flex items-center space-x-4 text-sm font-medium">
-          {DESKTOP_MAIN.map((id) => {
-            const item = NAV_ITEMS.find((n) => n.id === id);
-            return (
+    <header className="sticky top-0 z-10 w-full backdrop-blur-md bg-white/90 border-b border-stone-200">
+      <nav className="max-w-container mx-auto px-4 md:px-8 py-3.5 flex items-center justify-between">
+        {/* ==== LEFT — Brand ==== */}
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => scrollToSection("hero")}
+            className="flex items-center justify-center w-7 h-7 rounded-md bg-brand text-white font-mono font-bold text-[12px] tracking-[-1px]"
+            aria-label="Home"
+          >
+            KR
+          </button>
+          <div className="hidden sm:flex flex-col leading-tight">
+            <span className="text-[13px] font-medium text-stone-900">Kenny Ramadhan</span>
+            <span className="font-mono text-[10px] text-stone-500">senior qa engineer</span>
+          </div>
+          <span className="hidden md:inline-flex items-center gap-1.5 bg-success-subtle text-success px-2 py-0.5 rounded-full text-[11px] font-medium">
+            <span className="w-[5px] h-[5px] rounded-full bg-success" />
+            open to work
+          </span>
+        </div>
+
+        {/* ==== RIGHT — Nav + Lang ==== */}
+        <div className="flex items-center gap-3 md:gap-6">
+          {/* Desktop nav links */}
+          <div className="hidden md:flex items-center gap-5 text-[13px]">
+            {NAV_ITEMS.map((item) => (
               <button
-                key={id}
-                onClick={() => scrollToSection(id)}
-                className={`hover:text-accent transition-colors ${
-                  activeId === id ? "text-amber-300 font-semibold" : ""
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={`transition-colors ${
+                  activeId === item.id
+                    ? "text-stone-900 font-medium"
+                    : "text-stone-600 hover:text-stone-900"
                 }`}
               >
                 {t(item.labelKey)}
               </button>
-            );
-          })}
-        </div>
+            ))}
+          </div>
 
-        {/* ==== RIGHT SIDE ==== */}
-        <div className="flex items-center space-x-3 md:space-x-4 ml-auto">
-          {/* Language Switcher */}
-          <div className="flex items-center space-x-2 text-sm font-medium">
+          {/* Lang toggle */}
+          <div className="flex items-center border border-stone-200 rounded-md overflow-hidden font-mono text-[11px]">
             <button
               onClick={() => changeLanguage("en")}
-              className={`hover:text-accent transition-colors ${
-                i18n.language === "en" ? "text-amber-300 font-semibold" : ""
+              className={`px-2 py-1 transition-colors ${
+                i18n.language === "en"
+                  ? "text-stone-900 font-medium"
+                  : "text-stone-400 hover:text-stone-600"
               }`}
             >
-              EN
+              en
             </button>
-            <span className="opacity-70">|</span>
+            <span className="text-stone-300">/</span>
             <button
               onClick={() => changeLanguage("id")}
-              className={`hover:text-accent transition-colors ${
-                i18n.language === "id" ? "text-amber-300 font-semibold" : ""
+              className={`px-2 py-1 transition-colors ${
+                i18n.language === "id"
+                  ? "text-stone-900 font-medium"
+                  : "text-stone-400 hover:text-stone-600"
               }`}
             >
-              ID
+              id
             </button>
           </div>
 
-          {/* Desktop "More" dropdown */}
-          <div className="hidden md:block relative">
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setDesktopOpen(!desktopOpen);
-              }}
-              className="p-2 hover:text-accent transition-colors focus:outline-none"
-            >
-              <Menu size={22} />
-            </button>
-            <AnimatePresence>
-              {desktopOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -8 }}
-                  transition={{ duration: 0.2 }}
-                  className="absolute right-0 mt-2 bg-slate-900 rounded-lg shadow-lg flex flex-col py-2 min-w-[180px] z-50 border border-slate-700"
-                >
-                  {DESKTOP_MORE.map((item) => (
-                    <button
-                      key={item.id}
-                      onClick={() => {
-                        scrollToSection(item.id);
-                        setDesktopOpen(false);
-                      }}
-                      className={`text-left px-4 py-2 text-sm hover:bg-slate-800 transition-colors ${
-                        activeId === item.id
-                          ? "text-amber-300 font-semibold"
-                          : "text-gray-200"
-                      }`}
-                    >
-                      {t(item.labelKey)}
-                    </button>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-
-          {/* Mobile hamburger toggle */}
+          {/* Mobile hamburger */}
           <button
-            className="md:hidden p-2 focus:outline-none"
+            className="md:hidden p-1 text-stone-600 focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </nav>
@@ -171,40 +122,30 @@ export default function Header() {
       {/* ==== MOBILE DROPDOWN ==== */}
       <AnimatePresence>
         {isOpen && (
-          <>
-            {/* Overlay to close on outside click */}
-            <motion.div
-              className="fixed inset-0 top-0 left-0 z-40"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsOpen(false)}
-            />
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.25 }}
-              className="md:hidden absolute left-0 right-0 top-full bg-slate-950 border-b border-slate-700 z-50 max-h-[80vh] overflow-y-auto"
-            >
-              {NAV_ITEMS.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => {
-                    scrollToSection(item.id);
-                    setIsOpen(false);
-                  }}
-                  className={`block w-full text-left px-6 py-3 text-base border-b border-slate-800 transition-colors ${
-                    activeId === item.id
-                      ? "text-amber-300 font-semibold bg-slate-900"
-                      : "text-gray-200 hover:bg-slate-800 active:bg-slate-800"
-                  }`}
-                >
-                  {t(item.labelKey)}
-                </button>
-              ))}
-            </motion.div>
-          </>
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden border-t border-stone-200 bg-white"
+          >
+            {NAV_ITEMS.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => {
+                  scrollToSection(item.id);
+                  setIsOpen(false);
+                }}
+                className={`block w-full text-left px-6 py-3 text-[14px] border-b border-stone-100 transition-colors ${
+                  activeId === item.id
+                    ? "text-stone-900 font-medium bg-stone-50"
+                    : "text-stone-600 hover:bg-stone-50"
+                }`}
+              >
+                {t(item.labelKey)}
+              </button>
+            ))}
+          </motion.div>
         )}
       </AnimatePresence>
     </header>

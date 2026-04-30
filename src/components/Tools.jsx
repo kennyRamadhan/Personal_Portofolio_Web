@@ -14,7 +14,7 @@ export default function Portfolio() {
   return (
     <motion.section
       id="portfolio"
-      className="p-8 md:p-16 bg-gray-900 text-gray-300 animate-fadeInUp"
+      className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white text-stone-900 animate-fadeInUp"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -22,17 +22,19 @@ export default function Portfolio() {
 
 
       {/* Certification */}
-      <h2 className="text-3xl font-bold mb-6 text-primary">{t("frameworks.name")}</h2>
+      <div className="max-w-6xl mx-auto">
+      <h2 className="text-2xl sm:text-3xl font-medium tracking-tight mb-8 text-stone-900">{t("frameworks.name")}</h2>
       <div className="grid md:grid-cols-2 gap-6">
         {tools.map((tool, idx) => (
           <div
             key={idx}
-            className="p-4 rounded-lg shadow-lg bg-gray-800 hover:scale-105 hover:shadow-xl transition-transform"
+            className="p-4 rounded-lg bg-white border border-stone-200 transition-colors duration-200"
           >
-               <h3 className="font-semibold text-accent">{tool.name}</h3>
-               <p className="text-gray-400 mb-2">{tool.level}</p>
+               <h3 className="font-medium text-stone-900">{tool.name}</h3>
+               <p className="text-stone-600 mb-2">{tool.level}</p>
           </div>
         ))}
+      </div>
       </div>
     </motion.section>
   );

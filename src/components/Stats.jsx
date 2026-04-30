@@ -50,33 +50,33 @@ export default function Stats() {
     <motion.section
       id="achievements"
       ref={ref}
-      className="py-16 sm:py-20 lg:py-24 bg-gray-900 text-gray-300"
+      className="py-16 sm:py-20 lg:py-24 bg-white text-stone-900"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-primary">
+      <h2 className="text-2xl sm:text-3xl font-medium tracking-tight mb-8 sm:mb-12 text-stone-900">
         {t("stats.title")}
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
         {stats.map((stat, idx) => (
           <motion.div
             key={idx}
-            className="p-4 sm:p-6 rounded-xl bg-slate-800/60 border border-slate-700 shadow-lg text-center hover:scale-105 hover:shadow-xl transition-transform"
+            className="p-4 sm:p-6 rounded-xl bg-white border border-stone-200 text-center transition-colors duration-200"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: idx * 0.15 }}
           >
-            <p className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-2">
+            <p className="text-3xl sm:text-4xl lg:text-5xl font-medium text-stone-900 mb-2">
               <CountUp
                 target={stat.value}
                 suffix={stat.suffix}
                 trigger={isInView}
               />
             </p>
-            <p className="text-sm text-gray-300">{t(stat.labelKey)}</p>
+            <p className="text-sm text-stone-600">{t(stat.labelKey)}</p>
           </motion.div>
         ))}
       </div>

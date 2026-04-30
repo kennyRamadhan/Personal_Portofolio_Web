@@ -22,7 +22,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="flex flex-col md:flex-row items-center justify-between min-h-screen px-4 py-8 sm:px-6 lg:px-8 mt-16 bg-gray-900 text-gray-300"
+      className="flex flex-col md:flex-row items-center justify-between min-h-[80vh] px-4 py-8 sm:px-6 lg:px-8 bg-white text-stone-900"
     >
       <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between">
       {/* Teks kiri */}
@@ -34,14 +34,14 @@ export default function Hero() {
       >
         <motion.h1
           variants={item}
-          className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 text-primary leading-tight"
+          className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium mb-6 text-stone-900 leading-tight tracking-tight"
         >
           {t("hero.title")}
         </motion.h1>
 
         <motion.p
           variants={item}
-          className="text-lg text-gray-400 mb-8 leading-relaxed max-w-lg"
+          className="text-lg text-stone-600 mb-8 leading-relaxed max-w-lg"
         >
           {t("hero.subtitle")}
         </motion.p>
@@ -53,7 +53,7 @@ export default function Hero() {
               const el = document.getElementById("featured-work");
               if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
             }}
-            className="px-6 py-3 rounded-lg bg-primary text-white font-medium shadow-md hover:bg-accent hover:shadow-accent/40 transition-all duration-300 inline-flex items-center gap-2"
+            className="px-6 py-3 rounded-lg bg-brand text-white font-medium shadow-sm hover:opacity-90 transition-all duration-200 inline-flex items-center gap-2"
           >
             <ArrowDown size={18} />
             {t("hero.viewWork")}
@@ -62,7 +62,7 @@ export default function Hero() {
           <a
             href="/assets/docs/Kenny-Ramadhan-CV.pdf"
             download="Kenny-Ramadhan-CV.pdf"
-            className="px-6 py-3 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 inline-flex items-center gap-2"
+            className="px-6 py-3 rounded-lg border border-stone-200 text-stone-900 hover:bg-stone-50 transition-all duration-200 inline-flex items-center gap-2"
           >
             <Download size={18} />
             {t("hero.download")}

@@ -49,9 +49,9 @@ function findCategory(name) {
 }
 
 const levelColor = {
-  Advanced: "text-purple-400",
-  Intermediate: "text-blue-400",
-  Basic: "text-gray-500",
+  Advanced: "text-brand",
+  Intermediate: "text-stone-600",
+  Basic: "text-stone-400",
 };
 
 const containerVariants = {
@@ -111,13 +111,13 @@ export default function Skills() {
   return (
     <motion.section
       id="skills"
-      className="py-16 sm:py-20 lg:py-24 bg-gray-900 text-gray-300"
+      className="py-16 sm:py-20 lg:py-24 bg-white text-stone-900"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-primary">
+      <h2 className="text-2xl sm:text-3xl font-medium tracking-tight mb-8 sm:mb-12 text-stone-900">
         {t("skills.name")}
       </h2>
 
@@ -126,7 +126,7 @@ export default function Skills() {
         if (!items || items.length === 0) return null;
         return (
           <div key={cat.key} className={catIdx === 0 ? "mt-4 mb-10" : "mt-8 mb-10"}>
-            <h3 className="text-lg font-semibold mb-3 text-primary">
+            <h3 className="text-lg font-medium mb-3 text-stone-900">
               {t(`skills.${cat.key}`)}
             </h3>
             <motion.div
@@ -139,13 +139,13 @@ export default function Skills() {
               {items.map((item, idx) => (
                 <motion.div
                   key={idx}
-                  className="min-h-[70px] h-full px-4 py-3 rounded-xl bg-slate-800/60 border border-slate-700 flex flex-col justify-center"
+                  className="min-h-[70px] h-full px-4 py-3 rounded-xl bg-white border border-stone-200 flex flex-col justify-center"
                   variants={cardVariants}
                 >
-                  <span className="text-sm font-medium text-gray-200">
+                  <span className="text-sm font-medium text-stone-900">
                     {item.name}
                   </span>
-                  <span className={`text-xs mt-1 ${levelColor[item.level] || "text-gray-500"}`}>
+                  <span className={`text-xs mt-1 ${levelColor[item.level] || "text-stone-500"}`}>
                     {item.level}
                   </span>
                 </motion.div>
