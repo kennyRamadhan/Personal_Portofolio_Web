@@ -1,10 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Background gradient & pattern */
+/* Set Inter as default body font */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
-  @apply bg-gradient-to-b from-indigo-100 via-white to-indigo-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #1A1A1A;
+  background: #FFFFFF;
 }
 
 /* Animasi sederhana */
