@@ -57,7 +57,7 @@ Node.js **18+** required (v20 / v22 recommended).
 5. **Bilingual content data** in `public/data/*.json` uses the `*Id` suffix pattern for Indonesian variants — e.g. `{ "title": "...", "titleId": "..." }` and `{ "summary": "...", "summaryId": "..." }`. This is separate from the i18next pattern; both coexist by design.
 6. **Framer Motion** for animations. Do not add other animation libraries.
 7. **lucide-react** for icons. Do not add other icon libraries.
-8. **Dark theme is the default and only theme.** Do not introduce a light-theme toggle unless explicitly asked.
+8. **Light theme is the default.** Dark mode toggle (sun/moon icon in nav) is planned for a future commit after design v2 component refactor stabilizes. Do not add `dark:` prefix variants in components during the v2 refactor; they will be added systematically in the dedicated dark-mode commit.
 9. **Preserve CRLF line endings** in existing files. The repo uses Windows-style line endings (CRLF). Do not bulk-convert to LF.
 10. **Confidentiality / NDA awareness** — see Section 9 below. This is non-negotiable.
 

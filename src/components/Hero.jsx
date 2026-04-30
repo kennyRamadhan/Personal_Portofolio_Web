@@ -70,25 +70,7 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Foto kanan */}
-      <motion.div
-        variants={item}
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, ease: "easeOut", delay: 0.8 }}
-        className="relative"
-      >
-        <div className="relative w-52 sm:w-64 md:w-96 max-w-full max-h-[450px] overflow-hidden">
-          <img
-            src="/assets/images/update_profile.png"
-            alt="Kenny Ramadhan"
-            loading="lazy"
-            decoding="async"
-            className="w-full h-auto object-cover object-top"
-          />
-          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-gray-900 to-transparent" />
-        </div>
-      </motion.div>
+      {/* TODO Commit 3: replace with H1 abstract indicator */}
       </div>
     </section>
   );
