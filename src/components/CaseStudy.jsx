@@ -92,7 +92,7 @@ export default function CaseStudy() {
                 {/* LEFT — Problem + Action */}
                 <div>
                   <div className="mb-3">
-                    <p className="font-mono text-[10px] text-accent dark:text-amber-400 uppercase tracking-[0.5px] mb-1">
+                    <p className="font-mono text-[10px] text-amber-700 dark:text-amber-400 uppercase tracking-[0.5px] mb-1">
                       {t("caseStudy.problem")}
                     </p>
                     <p className="text-[13px] text-stone-600 dark:text-stone-400 leading-snug">
@@ -100,7 +100,7 @@ export default function CaseStudy() {
                     </p>
                   </div>
                   <div>
-                    <p className="font-mono text-[10px] text-accent dark:text-amber-400 uppercase tracking-[0.5px] mb-1">
+                    <p className="font-mono text-[10px] text-amber-700 dark:text-amber-400 uppercase tracking-[0.5px] mb-1">
                       {t("caseStudy.action")}
                     </p>
                     <p className="text-[13px] text-stone-600 dark:text-stone-400 leading-snug">

@@ -87,7 +87,7 @@ export default function Header({ theme, onToggleTheme }) {
               className={`px-2 py-1 transition-colors ${
                 i18n.language === "en"
                   ? "text-stone-900 dark:text-stone-50 font-medium"
-                  : "text-stone-400 dark:text-stone-500 hover:text-stone-600 dark:hover:text-stone-300"
+                  : "text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200"
               }`}
             >
               en
@@ -98,7 +98,7 @@ export default function Header({ theme, onToggleTheme }) {
               className={`px-2 py-1 transition-colors ${
                 i18n.language === "id"
                   ? "text-stone-900 dark:text-stone-50 font-medium"
-                  : "text-stone-400 dark:text-stone-500 hover:text-stone-600 dark:hover:text-stone-300"
+                  : "text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200"
               }`}
             >
               id

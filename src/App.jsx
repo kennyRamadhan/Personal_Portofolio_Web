@@ -34,14 +34,22 @@ export default function App() {
 
   return (
     <div className="min-h-screen font-sans bg-white dark:bg-stone-950 text-stone-900 dark:text-stone-50">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand focus:text-white focus:rounded-md focus:text-sm"
+      >
+        Skip to main content
+      </a>
       <Header theme={theme} onToggleTheme={toggleTheme} />
-      <Hero theme={theme} />
-      <About />
-      <Stats />
-      <CaseStudy />
-      <Portfolio />
-      <Skills />
-      {/* <Blog /> */}
+      <main id="main-content">
+        <Hero theme={theme} />
+        <About />
+        <Stats />
+        <CaseStudy />
+        <Portfolio />
+        <Skills />
+        {/* <Blog /> */}
+      </main>
       <Contact />
     </div>
   );
