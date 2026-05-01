@@ -43,7 +43,7 @@ export default function Contact() {
               <span className="text-[14px] font-medium text-stone-900 dark:text-stone-50">Kenny Ramadhan</span>
             </div>
             <p className="text-[12px] text-stone-600 dark:text-stone-400 leading-relaxed max-w-[280px]">
-              Senior QA Engineer with 5+ years across Tier-1 Indonesian banks, fintech, and capital markets.
+              Senior QA Engineer with 6+ years across Tier-1 Indonesian banks, fintech, and capital markets.
             </p>
             <p className="font-mono text-[11px] text-stone-500 dark:text-stone-400">jakarta · idn · utc+7</p>
           </div>

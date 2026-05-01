@@ -177,7 +177,7 @@ Button radius:        6px                    rounded-md
 
 **Card content (3 lines)**:
 1. Mono label (10px JetBrains Mono, color `#78716C`, snake_case): `years_experience`, `tests_built`, `automation_coverage`, `products_tested`
-2. Big number (30px Inter Medium, letter-spacing -0.6px): `5+`, `300+`, `~70%`, `8+`
+2. Big number (30px Inter Medium, letter-spacing -0.6px): `6+`, `1200+`, `3+`, `3+`, `6+` (current 5-card layout — see Stats.jsx)
 3. Context line (11px Inter, color `#525252`): `across QA roles`, `automated cases`, `across modules`, `enterprise systems`
 
 ### 6.4 Section markers

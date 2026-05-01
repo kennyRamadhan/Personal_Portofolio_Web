@@ -1,8 +1,8 @@
 # Kenny Ramadhan — Personal Portfolio
 
-Personal portfolio website showcasing 5+ years of QA engineering experience across Web, Mobile, API, and enterprise systems.
+Personal portfolio website showcasing 6+ years of QA engineering experience across Web, Mobile, API, and enterprise systems.
 
-🌐 **Live**: [kenny-portofolio-web.vercel.app](https://kenny-portofolio-web.vercel.app/)
+🌐 **Live**: [kennyramadhan.com](https://kennyramadhan.com/)
 
 ---
 
