@@ -84,7 +84,17 @@ export default function Hero({ theme }) {
             </p>
             <div className="flex gap-1">
               {BAR_CLASSES.map((cls, i) => (
-                <span key={i} className={`w-2 h-2 rounded-[1px] ${cls}`} />
+                <motion.span
+                  key={i}
+                  className={`w-2 h-2 rounded-[1px] ${cls}`}
+                  animate={{ opacity: [0.25, 1, 0.25] }}
+                  transition={{
+                    duration: 1.2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: i * 0.15,
+                  }}
+                />
               ))}
             </div>
           </div>
