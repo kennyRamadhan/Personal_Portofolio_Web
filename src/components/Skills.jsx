@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 // Five canonical mono-label categories per design v2 §6.7.
 const MATRIX = [
@@ -32,6 +33,7 @@ const MATRIX = [
 ];
 
 export default function Skills() {
+  const { t } = useTranslation();
   return (
     <section
       id="skills"
@@ -42,11 +44,10 @@ export default function Skills() {
           {"// skills matrix"}
         </p>
         <h2 className="text-[28px] font-medium tracking-tight text-stone-900 dark:text-stone-50 mb-3">
-          Capabilities by category.
+          {t("skills.heading")}
         </h2>
         <p className="text-[14px] text-stone-600 dark:text-stone-400 max-w-2xl leading-relaxed mb-8">
-          Tools and frameworks I use day-to-day across automation, API, performance,
-          CI/CD, and programming.
+          {t("skills.description")}
         </p>
 
         <motion.div

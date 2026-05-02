@@ -2,9 +2,9 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 const RESOURCE_LINKS = [
-  { label: "Download CV", suffix: "↓", href: "/assets/docs/Kenny-Ramadhan-CV.pdf", download: "Kenny-Ramadhan-CV.pdf" },
-  { label: "GitHub repos", suffix: "→", href: "https://github.com/kennyRamadhan", external: true },
-  { label: "Blog", soon: true },
+  { labelKey: "downloadCv", suffix: "↓", href: "/assets/docs/Kenny-Ramadhan-CV.pdf", download: "Kenny-Ramadhan-CV.pdf" },
+  { labelKey: "githubRepos", suffix: "→", href: "https://github.com/kennyRamadhan", external: true },
+  { labelKey: "blog", soon: true },
 ];
 
 const CONNECT_LINKS = [
@@ -43,7 +43,7 @@ export default function Contact() {
               <span className="text-[14px] font-medium text-stone-900 dark:text-stone-50">Kenny Ramadhan</span>
             </div>
             <p className="text-[12px] text-stone-600 dark:text-stone-400 leading-relaxed max-w-[280px]">
-              Senior QA Engineer with 6+ years across Tier-1 Indonesian banks, fintech, and capital markets.
+              {t("contacts.brandDescription")}
             </p>
             <p className="font-mono text-[11px] text-stone-500 dark:text-stone-400">jakarta · idn · utc+7</p>
           </div>
@@ -51,15 +51,15 @@ export default function Contact() {
           {/* Col 2 — Resources */}
           <div>
             <p className="font-mono text-[10px] text-stone-500 dark:text-stone-400 uppercase tracking-wider mb-4">
-              RESOURCES
+              {t("contacts.resources")}
             </p>
             <ul className="flex flex-col gap-2.5">
               {RESOURCE_LINKS.map((link) => (
-                <li key={link.label}>
+                <li key={link.labelKey}>
                   {link.soon ? (
                     <span className="text-[13px] text-stone-900 dark:text-stone-50">
-                      {link.label}{" "}
-                      <span className="font-mono text-[10px] text-stone-500 dark:text-stone-400">(soon)</span>
+                      {t(`contacts.links.${link.labelKey}`)}{" "}
+                      <span className="font-mono text-[10px] text-stone-500 dark:text-stone-400">({t("contacts.links.soon")})</span>
                     </span>
                   ) : (
                     <a
@@ -68,7 +68,7 @@ export default function Contact() {
                       {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                       className="text-[13px] text-stone-900 dark:text-stone-50 hover:text-brand dark:hover:text-indigo-400 transition-colors"
                     >
-                      {link.label} {link.suffix}
+                      {t(`contacts.links.${link.labelKey}`)} {link.suffix}
                     </a>
                   )}
                 </li>
@@ -79,7 +79,7 @@ export default function Contact() {
           {/* Col 3 — Connect */}
           <div>
             <p className="font-mono text-[10px] text-stone-500 dark:text-stone-400 uppercase tracking-wider mb-4">
-              CONNECT
+              {t("contacts.connect")}
             </p>
             <ul className="flex flex-col gap-2.5">
               {CONNECT_LINKS.map((link) => (

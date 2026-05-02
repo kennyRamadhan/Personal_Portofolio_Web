@@ -52,11 +52,10 @@ export default function CaseStudy() {
           {"// featured work"}
         </p>
         <h2 className="text-[28px] font-medium tracking-tight text-stone-900 dark:text-stone-50 mb-3">
-          Selected case studies.
+          {t("caseStudy.subheading")}
         </h2>
         <p className="text-[14px] text-stone-600 dark:text-stone-400 max-w-2xl leading-relaxed mb-8">
-          A focused selection of QA engagements across multi-region SaaS, Tier-1 banking,
-          payment APIs, and fintech.
+          {t("caseStudy.description")}
         </p>
 
         <motion.div

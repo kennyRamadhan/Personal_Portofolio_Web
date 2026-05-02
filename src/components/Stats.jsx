@@ -1,15 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const STATS = [
-  { label: "years_experience",  value: "6+",    context: "across QA roles" },
-  { label: "tests_authored",    value: "1200+", context: "manual + automated" },
-  { label: "frameworks_built",  value: "3+",    context: "Playwright, Selenium, Katalon" },
-  { label: "cicd_pipelines",    value: "3+",    context: "GitHub Actions, Azure DevOps, Allure" },
-  { label: "domains_tested",    value: "6+",    context: "banking, fintech, capital markets, +" },
+  { label: "years_experience",  value: "6+",    contextKey: "yearsExperience" },
+  { label: "tests_authored",    value: "1200+", contextKey: "automatedTests" },
+  { label: "frameworks_built",  value: "3+",    contextKey: "frameworksBuilt" },
+  { label: "cicd_pipelines",    value: "3+",    contextKey: "cicdPipelines" },
+  { label: "domains_tested",    value: "6+",    contextKey: "domainsTested" },
 ];
 
 export default function Stats() {
+  const { t } = useTranslation();
+
   return (
     <motion.section
       id="achievements"
@@ -33,7 +36,7 @@ export default function Stats() {
                 {s.value}
               </p>
               <p className="text-[11px] text-stone-600 dark:text-stone-400 leading-snug">
-                {s.context}
+                {t(`stats.context.${s.contextKey}`)}
               </p>
             </div>
           ))}

@@ -1,154 +1,183 @@
 {
-    "nav": {
-      "home": "Home",
-      "about": "About",
-      "achievements": "Achievements",
-      "skills": "Skills",
-      "experience": "Experience",
-      "testimonials": "What Teammates Say",
-      "featuredWork": "Featured Work",
-      "portfolio": "Portfolio",
-      "insights": "Insights",
-      "contact": "Contact"
-    },
-    "header": {
-      "about": "About",
-      "contact": "Contact",
-      "skills": "Skills",
-      "portfolio": "Portfolio",
-      "projects": "Projects",
-      "frameworks": "Frameworks",
-      "languages": "Programming"
-    },
-    "hero": {
-      "title": "Building Reliable Software by Reducing Bugs Before They Reach Production",
-      "subtitle": "Senior QA Engineer with 6+ years across Tier-1 Indonesian banks, fintech, and capital markets. Specialized in automation frameworks, Bank Indonesia SNAP API testing, and CI/CD-integrated quality engineering.",
-      "download": "Download CV",
-      "viewWork": "View My Work"
-    },
-    "about": {
-      "title": "About",
-      "heading": "A QA mindset built across regulated industries.",
-      "paragraph1": "I started in QA in 2020 as a Manual QA Engineer on an automotive enterprise platform, then moved into regulated financial industries — banking, fintech, capital markets, and multi-region SaaS. Over 6+ years, I've learned that good quality isn't about finding bugs — it's about building systems and discipline that make bugs hard to surface in the first place.",
-      "paragraph2": "Today I specialize in automation framework design, API testing with cryptographic signatures for Bank Indonesia's SNAP standard, and CI/CD integration for regulated environments. The cross-domain experience trained me to see QA as an engineering discipline, not a checking task."
-    },
-    "portfolio": {
-      "title": "Portfolio",
-      "projects": [
-        {
-          "title": "Java Spring Boot Portfolio",
-          "description": "Personal project creating an API backend service for citizen management using Java Spring Boot.",
-          "link": "https://github.com/kennyRamadhan/SpringBoot_API_Management_Citizen_Portofolio"
-        },
-        {
-          "title": "Node.js Portfolio",
-          "description": "Personal project creating an API backend service for personal finance management.",
-          "link": "https://github.com/kennyRamadhan/API_Personal_Finance_Node.Js_Portofolio"
-        },
-        {
-          "title": "Manual Testing Portfolio",
-          "description": "Sample Test Case and Test Plan for manual testing documentation.",
-          "link": "https://drive.google.com/drive/folders/1urOHYKIElCxs0w8X_v7PpklHcQYvQYoU?usp=drive_link"
-        },
-        {
-          "title": "Selenium Java Mobile & Web Portfolio",
-          "description": "Project handling Web & Mobile automation using Appium, TestNG, WebDriver, and Extent Report.",
-          "link": "https://github.com/kennyRamadhan/selenium-java-testng-automation-portofolio"
-        },
-        {
-          "title": "Selenium Java API Portfolio",
-          "description": "Project for API testing using TestNG, RestAssured, and Extent Report.",
-          "link": "https://github.com/kennyRamadhan/selenium-java-testng-automation-framework-api-tests"
-        },
-        {
-          "title": "Katalon Studio Portfolio",
-          "description": "Sample Katalon project with data-driven testing.",
-          "link": "https://github.com/kennyRamadhan/katalon-automation-testing-portfolio"
-        },
-        {
-          "title": "Cypress Portfolio",
-          "description": "Sample Cypress project for UI and API testing using Cucumber.",
-          "link": "https://github.com/kennyRamadhan/cypress-ui-api-testing-framework"
-        },
-        {
-          "title": "Selenium Python Portfolio",
-          "description": "Sample Selenium project using Pytest for Python automation.",
-          "link": "https://github.com/kennyRamadhan/selenium-python-testng-automation-framework"
-        },
-        {
-          "title": "Robot Framework Portfolio",
-          "description": "Sample Robot Framework project for automation testing.",
-          "link": "https://github.com/kennyRamadhan/robot_framework_automation_testing_portofolio"
-        }
-      ]
-    },
-    "experience": {
-        "name": "Work Experience"
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "achievements": "Achievements",
+    "skills": "Skills",
+    "experience": "Experience",
+    "testimonials": "What Teammates Say",
+    "featuredWork": "Featured Work",
+    "portfolio": "Portfolio",
+    "insights": "Insights",
+    "contact": "Contact"
+  },
+  "header": {
+    "about": "About",
+    "contact": "Contact",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "projects": "Projects",
+    "frameworks": "Frameworks",
+    "languages": "Programming"
+  },
+  "hero": {
+    "title": "Building Reliable Software by Reducing Bugs Before They Reach Production",
+    "subtitle": "Senior QA Engineer with 6+ years across Tier-1 Indonesian banks, fintech, and capital markets. Specialized in automation frameworks, Bank Indonesia SNAP API testing, and CI/CD-integrated quality engineering.",
+    "download": "Download CV",
+    "viewWork": "View My Work"
+  },
+  "about": {
+    "title": "About",
+    "heading": "A QA mindset built across regulated industries.",
+    "paragraph1": "I started in QA in 2020 as a Manual QA Engineer on an automotive enterprise platform, then moved into regulated financial industries — banking, fintech, capital markets, and multi-region SaaS. Over 6+ years, I've learned that good quality isn't about finding bugs — it's about building systems and discipline that make bugs hard to surface in the first place.",
+    "paragraph2": "Today I specialize in automation framework design, API testing with cryptographic signatures for Bank Indonesia's SNAP standard, and CI/CD integration for regulated environments. The cross-domain experience trained me to see QA as an engineering discipline, not a checking task."
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "projects": [
+      {
+        "title": "Java Spring Boot Portfolio",
+        "description": "Personal project creating an API backend service for citizen management using Java Spring Boot.",
+        "link": "https://github.com/kennyRamadhan/SpringBoot_API_Management_Citizen_Portofolio"
       },
-      "programming": {
-        "name": "Familiar Programming Languages"
+      {
+        "title": "Node.js Portfolio",
+        "description": "Personal project creating an API backend service for personal finance management.",
+        "link": "https://github.com/kennyRamadhan/API_Personal_Finance_Node.Js_Portofolio"
       },
-      "skills": {
-        "name": "Skills",
-        "coreQaExpertise": "Core QA Expertise",
-        "automation": "Automation",
-        "apiTesting": "API Testing",
-        "performanceTesting": "Performance Testing",
-        "ciCdAndReporting": "CI/CD & Reporting",
-        "programming": "Programming",
-        "documentation": "Documentation",
-        "database": "Database"
+      {
+        "title": "Manual Testing Portfolio",
+        "description": "Sample Test Case and Test Plan for manual testing documentation.",
+        "link": "https://drive.google.com/drive/folders/1urOHYKIElCxs0w8X_v7PpklHcQYvQYoU?usp=drive_link"
       },
-      "frameworks": {
-        "name": "Frameworks Or Tools"
+      {
+        "title": "Selenium Java Mobile & Web Portfolio",
+        "description": "Project handling Web & Mobile automation using Appium, TestNG, WebDriver, and Extent Report.",
+        "link": "https://github.com/kennyRamadhan/selenium-java-testng-automation-portofolio"
       },
-      "contacts": {
-        "name": "Let's Build Better Quality Software Together",
-        "tagline": "Currently focused on my role at Noovoleum. Open to freelance and side projects in QA automation, API testing, and CI/CD."
+      {
+        "title": "Selenium Java API Portfolio",
+        "description": "Project for API testing using TestNG, RestAssured, and Extent Report.",
+        "link": "https://github.com/kennyRamadhan/selenium-java-testng-automation-framework-api-tests"
       },
-      "testimonials": {
-        "heading": "What Teammates Say",
-        "disclaimer": "Paraphrased feedback based on real working relationships. Names withheld for privacy."
+      {
+        "title": "Katalon Studio Portfolio",
+        "description": "Sample Katalon project with data-driven testing.",
+        "link": "https://github.com/kennyRamadhan/katalon-automation-testing-portfolio"
       },
-      "blog": {
-        "heading": "Insights"
+      {
+        "title": "Cypress Portfolio",
+        "description": "Sample Cypress project for UI and API testing using Cucumber.",
+        "link": "https://github.com/kennyRamadhan/cypress-ui-api-testing-framework"
       },
-      "stats": {
-        "title": "Achievements",
-        "yearsExperience": "Years Experience in QA across Web, API, and Mobile",
-        "automatedTests": "Automated Tests built using Cypress, Selenium, Playwright, and Katalon",
-        "regressionReduction": "Reduction in Regression Time through automation and improved coverage",
-        "productsTested": "Products Tested across multi-product environments and complex systems"
+      {
+        "title": "Selenium Python Portfolio",
+        "description": "Sample Selenium project using Pytest for Python automation.",
+        "link": "https://github.com/kennyRamadhan/selenium-python-testng-automation-framework"
       },
-      "caseStudy": {
-        "heading": "Featured Work",
-        "problem": "Problem",
-        "action": "Action",
-        "result": "Result",
-        "uco": {
-          "title": "UCO Collect — Multi-Region QA Ownership",
-          "problem": "Multiple regions (Indonesia, Thailand, Singapore) with inconsistent behavior and high regression risk. No dedicated QA team, requiring a single engineer to own the entire quality lifecycle.",
-          "action": "Designed structured test scenarios across regions. Built 300+ automated test cases from scratch spanning API, web, and mobile (iOS & Android). Implemented multi-environment validation (Dev, QA, Staging, Production). Established detailed bug reporting with region and environment scope annotations.",
-          "result": "Increased release confidence across all 3 regions. Reduced manual regression effort significantly. Improved consistency and quality across regions and platforms."
-        },
-        "tier1Bank": {
-          "title": "Tier-1 Indonesian Bank — Multi-Module Banking Platform QA",
-          "problem": "Complex banking system spanning credit, savings, payments, and transfer modules with frequent releases requiring thorough QA coverage.",
-          "action": "Created and maintained automation scripts using Katalon Studio and Selenium. Performed end-to-end, regression, and integration testing across all modules. Coordinated closely with developers and BA to ensure comprehensive coverage.",
-          "result": "Achieved approximately 70% automation coverage. Identified 50+ critical issues before release. Reduced production defects and improved feature stability across releases."
-        },
-        "snap": {
-          "title": "Bank Indonesia SNAP API — Cryptographic Signature Automation",
-          "problem": "Bank Indonesia SNAP (Standar Nasional Open API Pembayaran) requires multi-layer cryptographic signing for every transaction — RSA SHA-256 for token authentication, SHA-256 body hashing, and HMAC-SHA512 transaction signing — making manual API testing slow and error-prone.",
-          "action": "Engineered reusable multi-layer signature utilities in Groovy as Katalon Studio keywords, converted from reference JavaScript implementations. Designed data-driven test suites covering 20+ scenarios per endpoint across HTTP status codes 200, 400, 401, 403, 404, 409, 500, and 504, with Excel-based scenario binding.",
-          "result": "Automated SNAP-compliant payment APIs (Balance Inquiry, SKNBI Transfer, RTGS Transfer, Direct Debit). Reduced API regression cycle time substantially and provided reusable signing keywords adopted across the team."
-        },
-        "qoin": {
-          "title": "Fintech E-Wallet — Flutter App Quality",
-          "problem": "Critical financial features in e-wallet applications requiring high accuracy and stability. Bugs in transaction flows could mean real money loss for users.",
-          "action": "Conducted API and mobile testing with focus on transaction accuracy. Validated transaction flows and edge cases across multiple e-wallet products. Built automation suites covering 150+ test scenarios using Selenium and Katalon Studio. Coordinated mass simulation testing across 4 sessions with 15–20 concurrent testers to validate concurrency and stability under load.",
-          "result": "Contributed to 30% reduction in post-release defects. Improved reliability of transaction features. Reduced critical bugs reaching production."
-        }
+      {
+        "title": "Robot Framework Portfolio",
+        "description": "Sample Robot Framework project for automation testing.",
+        "link": "https://github.com/kennyRamadhan/robot_framework_automation_testing_portofolio"
       }
+    ]
+  },
+  "experience": {
+    "name": "Work Experience",
+    "description": "Seven QA engagements across regulated finance, capital markets, and SaaS.",
+    "companies": {
+      "Noovoleum":                  { "date": "Dec 2025 → present",  "keywords": "Multi-region SaaS · Playwright · Python" },
+      "PT Ikonsultan Inovatama":    { "date": "1 year 5 months",     "keywords": "Tier-1 Banking · Salesforce · Selenium" },
+      "PT Moonlay Technology":      { "date": "1 year 4 months",     "keywords": "SNAP API · Katalon · Groovy · Performance" },
+      "PT Qoin Digital Indonesia":  { "date": "1 year 1 month",      "keywords": "E-Wallet · Crypto Wallet · IAM · Katalon" },
+      "PT Avows Technology":        { "date": "7 months",            "keywords": "Pawn-broking · Sharia Lending · Manual" },
+      "PT Berca Hardaya Perkasa":   { "date": "6 months",            "keywords": "Desktop support · Hardware · Networking" },
+      "PT Whiteopen Teknologi":     { "date": "1 year",              "keywords": "Automotive enterprise QA · Go-Live PIC · 35+ modules" }
+    }
+  },
+  "programming": {
+    "name": "Familiar Programming Languages"
+  },
+  "skills": {
+    "name": "Skills",
+    "heading": "Capabilities by category.",
+    "description": "Tools and frameworks I use day-to-day across automation, API, performance, CI/CD, and programming.",
+    "coreQaExpertise": "Core QA Expertise",
+    "automation": "Automation",
+    "apiTesting": "API Testing",
+    "performanceTesting": "Performance Testing",
+    "ciCdAndReporting": "CI/CD & Reporting",
+    "programming": "Programming",
+    "documentation": "Documentation",
+    "database": "Database"
+  },
+  "frameworks": {
+    "name": "Frameworks Or Tools"
+  },
+  "contacts": {
+    "name": "Let's Build Better Quality Software Together",
+    "tagline": "Currently focused on my role at Noovoleum. Open to freelance and side projects in QA automation, API testing, and CI/CD.",
+    "brandDescription": "Senior QA Engineer with 6+ years across Tier-1 Indonesian banks, fintech, and capital markets.",
+    "resources": "RESOURCES",
+    "connect": "CONNECT",
+    "links": {
+      "downloadCv": "Download CV",
+      "githubRepos": "GitHub repos",
+      "blog": "Blog",
+      "soon": "soon"
+    }
+  },
+  "testimonials": {
+    "heading": "What Teammates Say",
+    "disclaimer": "Paraphrased feedback based on real working relationships. Names withheld for privacy."
+  },
+  "blog": {
+    "heading": "Insights"
+  },
+  "stats": {
+    "title": "Achievements",
+    "yearsExperience": "Years Experience in QA across Web, API, and Mobile",
+    "automatedTests": "Automated Tests built using Cypress, Selenium, Playwright, and Katalon",
+    "regressionReduction": "Reduction in Regression Time through automation and improved coverage",
+    "productsTested": "Products Tested across multi-product environments and complex systems",
+    "context": {
+      "yearsExperience": "across QA roles",
+      "automatedTests": "manual + automated",
+      "frameworksBuilt": "Playwright, Selenium, Katalon",
+      "cicdPipelines": "GitHub Actions, Azure DevOps, Allure",
+      "domainsTested": "banking, fintech, capital markets, +"
+    }
+  },
+  "caseStudy": {
+    "heading": "Featured Work",
+    "subheading": "Selected case studies.",
+    "description": "A focused selection of QA engagements across multi-region SaaS, Tier-1 banking, payment APIs, and fintech.",
+    "problem": "Problem",
+    "action": "Action",
+    "result": "Result",
+    "uco": {
+      "title": "UCO Collect — Multi-Region QA Ownership",
+      "problem": "Multiple regions (Indonesia, Thailand, Singapore) with inconsistent behavior and high regression risk. No dedicated QA team, requiring a single engineer to own the entire quality lifecycle.",
+      "action": "Designed structured test scenarios across regions. Built 300+ automated test cases from scratch spanning API, web, and mobile (iOS & Android). Implemented multi-environment validation (Dev, QA, Staging, Production). Established detailed bug reporting with region and environment scope annotations.",
+      "result": "Increased release confidence across all 3 regions. Reduced manual regression effort significantly. Improved consistency and quality across regions and platforms."
+    },
+    "tier1Bank": {
+      "title": "Tier-1 Indonesian Bank — Multi-Module Banking Platform QA",
+      "problem": "Complex banking system spanning credit, savings, payments, and transfer modules with frequent releases requiring thorough QA coverage.",
+      "action": "Created and maintained automation scripts using Katalon Studio and Selenium. Performed end-to-end, regression, and integration testing across all modules. Coordinated closely with developers and BA to ensure comprehensive coverage.",
+      "result": "Achieved approximately 70% automation coverage. Identified 50+ critical issues before release. Reduced production defects and improved feature stability across releases."
+    },
+    "snap": {
+      "title": "Bank Indonesia SNAP API — Cryptographic Signature Automation",
+      "problem": "Bank Indonesia SNAP (Standar Nasional Open API Pembayaran) requires multi-layer cryptographic signing for every transaction — RSA SHA-256 for token authentication, SHA-256 body hashing, and HMAC-SHA512 transaction signing — making manual API testing slow and error-prone.",
+      "action": "Engineered reusable multi-layer signature utilities in Groovy as Katalon Studio keywords, converted from reference JavaScript implementations. Designed data-driven test suites covering 20+ scenarios per endpoint across HTTP status codes 200, 400, 401, 403, 404, 409, 500, and 504, with Excel-based scenario binding.",
+      "result": "Automated SNAP-compliant payment APIs (Balance Inquiry, SKNBI Transfer, RTGS Transfer, Direct Debit). Reduced API regression cycle time substantially and provided reusable signing keywords adopted across the team."
+    },
+    "qoin": {
+      "title": "Fintech E-Wallet — Flutter App Quality",
+      "problem": "Critical financial features in e-wallet applications requiring high accuracy and stability. Bugs in transaction flows could mean real money loss for users.",
+      "action": "Conducted API and mobile testing with focus on transaction accuracy. Validated transaction flows and edge cases across multiple e-wallet products. Built automation suites covering 150+ test scenarios using Selenium and Katalon Studio. Coordinated mass simulation testing across 4 sessions with 15–20 concurrent testers to validate concurrency and stability under load.",
+      "result": "Contributed to 30% reduction in post-release defects. Improved reliability of transaction features. Reduced critical bugs reaching production."
+    }
   }
-  
+}

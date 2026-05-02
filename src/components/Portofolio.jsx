@@ -2,45 +2,15 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-// Per-company display overrides (date range, keywords, location).
-// Keyed by company string in experience.json.
+// Per-company flags (non-translatable). Date and keywords are pulled from i18n.
 const META = {
-  "Noovoleum": {
-    date: "Dec 2025 → present",
-    current: true,
-    keywords: "Multi-region SaaS · Playwright · Python",
-    location: "jakarta",
-  },
-  "PT Ikonsultan Inovatama": {
-    date: "1 year 5 months",
-    keywords: "Tier-1 Banking · Salesforce · Selenium",
-    location: "jakarta",
-  },
-  "PT Moonlay Technology": {
-    date: "1 year 4 months",
-    keywords: "SNAP API · Katalon · Groovy · Performance",
-    location: "jakarta",
-  },
-  "PT Qoin Digital Indonesia": {
-    date: "1 year 1 month",
-    keywords: "E-Wallet · Crypto Wallet · IAM · Katalon",
-    location: "jakarta",
-  },
-  "PT Avows Technology": {
-    date: "7 months",
-    keywords: "Pawn-broking · Sharia Lending · Manual",
-    location: "jakarta",
-  },
-  "PT Berca Hardaya Perkasa": {
-    date: "6 months",
-    keywords: "Desktop support · Hardware · Networking",
-    location: "jakarta",
-  },
-  "PT Whiteopen Teknologi": {
-    date: "1 year",
-    keywords: "Automotive enterprise QA · Go-Live PIC · 35+ modules",
-    location: "jakarta",
-  },
+  "Noovoleum":                  { current: true, location: "jakarta" },
+  "PT Ikonsultan Inovatama":    { location: "jakarta" },
+  "PT Moonlay Technology":      { location: "jakarta" },
+  "PT Qoin Digital Indonesia":  { location: "jakarta" },
+  "PT Avows Technology":        { location: "jakarta" },
+  "PT Berca Hardaya Perkasa":   { location: "jakarta" },
+  "PT Whiteopen Teknologi":     { location: "jakarta" },
 };
 
 export default function Portfolio() {
@@ -67,7 +37,7 @@ export default function Portfolio() {
           {t("experience.name", "Where I've worked.")}
         </h2>
         <p className="text-[14px] text-stone-600 dark:text-stone-400 max-w-2xl leading-relaxed mb-8">
-          Seven QA engagements across regulated finance, capital markets, and SaaS.
+          {t("experience.description")}
         </p>
 
         <motion.div
@@ -91,14 +61,14 @@ export default function Portfolio() {
                 }`}
               >
                 <div className={`font-mono text-[11px] ${dateClasses}`}>
-                  {meta.date || exp.period}
+                  {t(`experience.companies.${exp.company}.date`, exp.period)}
                 </div>
                 <div>
                   <p className="text-[13px] font-medium text-stone-900 dark:text-stone-50">{exp.role}</p>
                   <p className="text-[12px] text-stone-600 dark:text-stone-400 mt-0.5">{exp.company}</p>
                 </div>
                 <div className="text-[11px] text-stone-500 dark:text-stone-400 leading-snug">
-                  {meta.keywords || ""}
+                  {t(`experience.companies.${exp.company}.keywords`, "")}
                 </div>
                 <div className="font-mono text-[11px] text-stone-500 dark:text-stone-400 md:text-right">
                   {meta.location || ""}
